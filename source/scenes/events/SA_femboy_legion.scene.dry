@@ -1,1 +1,18 @@
-transnazis
+title: SA Trans femboy legion
+new-page: true
+subtitle: Yes, you read the title correctly
+view-if: nazi_femboys == 1
+max-visits: 1
+face-image: img/transnazis.jpg
+tags: event
+
+= Trans Femboy Legion
+
+The SA has authorized the creation of the special femboy legions exclusively composed of Transgenders. Viktor Lutze has personally authorized this, after the legalization of trans rights with the help of the NSDAP. Trans femboy edits really do have that much of an effect.
+
+- @hoi4lobbyactivated: Okay this getting out of hand
+
+@hoi4lobbyactivated
+on-arrival: sa_strength += 100; workers_nsdap += 3; unemployed_nsdap += 3; pro_republic -= 3
+
+Seems like our party made a bit of a huge mistake passing trans rights bills with the help of the NSDAP.
