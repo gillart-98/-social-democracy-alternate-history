@@ -52,6 +52,7 @@ audio: shuffle music/1928_1933/Das_lila_lied_normalized.mp3
 on-arrival: {!
 Q.transnazisupport = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r + Q.nsdap_r;
 !}
+
 This will allow trans people to change sex, this will be opposed by many and thus will be hard to pass. how would we go about passing this?
 
 - @progressivetrans: Get the normal progressives to support this bill.
