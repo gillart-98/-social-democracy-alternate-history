@@ -20,6 +20,7 @@ What are we to do now?
 Do we realize that this means civil war, against the full force of the state?
 
 - @civil_war: Yes.
+- @shhh: Not if we kidnap Hitler.
 - @give_up: We are not ready for war. Instead, we will vote against the nazis in the Reichstag.
 
 @give_up
@@ -31,3 +32,37 @@ The Reichstag is burned, ostensibly by a foreign communist. In the wake, the Naz
 Germany is lost.
 
 - @game_over: Game over.
+
+@shhh
+
+We managed to kidnap Hitler. We send him to Unit 731 in Manchuria so he can suffer for the rest of his life. Braun can now take power as President and call snap elections.
+
+on-arrival: president = "Braun";  reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+
+- @new_elections_hitler_byebye: Did we overreach?, nah we go plan elections now.
+
+@new_elections_hitler_byebye
+on-arrival: {!
+Q.in_emergency_government = 1;
+Q.no_majority_elections += 1;
+Q.next_election_month = Q.month + 6;
+Q.next_election_time = Q.time + 6;
+if (Q.next_election_month > 12) {
+    Q.next_election_month -= 12;
+    Q.next_election_year = Q.year + 1;
+} else {
+    Q.next_election_year = Q.year;
+}
+Q.pro_republic -= 5;
+Q.workers_spd += 3;
+Q.new_middle_spd += 3;
+Q.old_middle_spd += 3;
+Q.rural_spd += 3;
+Q.catholics_spd += 3;
+Q.workers_nsdap -= 100;
+Q.old_middle_nsdap -= 100;
+Q.new_middle_nsdap -= 100;
+Q.rural_nsdap -= 100;
+Q.unemployed_nsdap -= 100;
+!}
+The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
