@@ -18,6 +18,7 @@ For better or for worse, the Socialists stand virtually alone in supporting incr
 - @family: Reform marriage, divorce, and property law.
 - @welfare: Improve welfare for single mothers and children.
 - @liberalize: Attempt to liberalize abortion laws.
+- @women_army: THIS SEEMS LIKE A PERFECT WAY TO EXPAND THE ARMY!
 - @return: Do not enact any policies for now.
 - @easy_discard
 - @cancel_advisor_action
@@ -44,6 +45,12 @@ on-arrival: welfare += 1; workers_spd += 5*(1-dissent); unemployed_spd += 5*(1-d
 
 We have increased welfare spending on women and children. [? if welfare >= 1 and unemployed >= 15 : Some of our coalition partners consider increased welfare spending profligate at this time. ?]
 
+@women_army
+subtitle: -1 budget
+choose-if: budget > 0
+on-arrival: coalition_dissent -= 1 if coalition_dissent > 0; reichswehr_loyalty += 0.17 if reichswehr_loyalty < 1; reichswehr_strength += 20; womens_rights += 1; left_dissent -= 5; kpd_coalition_dissent -= 1; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; eu_progress += 1; economic_growth += 0.1
+
+We recruited more women into the army. The KPD doesn't have any argument against this and neither does the centre and right. However the Westoids are sexist and want us weak so they critize our policy.
 
 @liberalize
 max-visits: 1
