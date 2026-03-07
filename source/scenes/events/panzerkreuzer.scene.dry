@@ -47,7 +47,7 @@ on-arrival: panzerkreuzer_funded = 1
 Our coalition partners are shocked by our intransigence! Chancellor [+ chancellor +] brings the matter to a Reichstag vote, which passes with all parties in favor except the SPD and KPD. The ship will be built.
 
 @counterporpose_defund_verailles
-on-arrival: dvp_relation += 8; z_relation += 5; dnvp_relation += 5; nsdap_relation += 2; left_dissent -= 10; labor_dissent -= 5; center_dissent -= 5; reformist_dissent -= 5; neorevisionist_dissent -= 5; panzerkreuzer_funded = 1; kpd_coalition_dissent -= 1; kpd_relation += 6; workers_spd += 3 west_relation -= 2;
+on-arrival: dvp_relation += 8; z_relation += 5; left_dissent -= 10; labor_dissent -= 5; center_dissent -= 5; reformist_dissent -= 5; neorevisionist_dissent -= 5; panzerkreuzer_funded = 1; kpd_coalition_dissent -= 1; kpd_relation += 6; workers_spd += 3 west_relation -= 2;
 
 Both internally and with our coalition partners this is ideal, it can avoid starving kids while still having big ship good be built. However the entente powers might be pissed off by us gutting their fund source. I'm sure they won't mind getting less reparations...
 
