@@ -72,7 +72,7 @@ Of course, conservatives and the far right accuse us of "degeneracy".
 subtitle: This won't have unexpected and weird consequences at all!
 unavailable-subtitle: We do not have majority support for this policy.
 choose-if: transnazisupport >= 50
-on-arrival: trans_rights = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; catholics_nsdap -= 4; unemployed_nsdap += 10; economic_growth += 0.1
+on-arrival: trans_rights = 1; nazi_femboys = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; catholics_nsdap -= 4; unemployed_nsdap += 10; economic_growth += 0.1
 
 We have passed a bill to allow legal recognition of transsexual and transvestite individuals as the sex in which they live, and allow them to change their name, dress as they wish without police persecution, and undergo medical treatment.
 
