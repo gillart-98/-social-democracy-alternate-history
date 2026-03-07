@@ -143,7 +143,7 @@ Adolf Hitler has taken power in Germany. However, we have rallied the democratic
 
 
 @no_hitler
-view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NSDAP"
+view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NSDAP" and Hitlertortured != 1
 title: Hitler does not yet control Germany...
 tags: endings
 go-to: eg_menu
@@ -151,6 +151,15 @@ go-to: eg_menu
 Hitler does not yet control Germany. [? if chancellor == "Papen" : However, Chancellor Papen's authoritarianism and far-right politics are paving the way for Hitler, or someone like him, to take power. ?] [? if chancellor == "Schleicher" : However, Chancellor Schleicher's authoritarianism and scheming is paving the way for Hitler, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if chancellor == "Brüning" : However, Chancellor Brüning's austerity policies and the continuation of the depression are paving the way for Hitler, or someone like him, to take power. ?]
 
 [? if hitler_deported == 1 : We have deported Hitler back to Austria. Hopefully he will never return. ?]
+
+@hitler_lost
+view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NSDAP" and Hitlertortured == 1
+title: Hitler is EPICLY deported to japanese war crime facilities!
+tags: endings
+go-to: eg_menu
+
+Actually it was a kidnapping, and the NSDAP will never recover now that their leader is a victim of horrific Japanese experiments. Our democratic coup was a absolute success and democracy is saved, even if we technically were complicit in warcrimes.  
+
 
 @nsdap_win
 view-if: chancellor == "Goebbels" or president == "Göring"
@@ -190,11 +199,20 @@ Germany is currently in the grip of a civil war, a brutal affair that has no obv
 
 @braun_victorious
 title: Otto Braun victorious
-view-if: president == "Braun"
+view-if: president == "Braun" and braundictator != 1
 tags: endings
 go-to: eg_menu
 
 Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is.
+
+@braun_victorious_kaiserreich
+title: All-German Supreme Kaiser Otto Braun victorious
+view-if: president == "Braun" and braundictator == 1
+tags: endings
+go-to: eg_menu
+
+Otto Braun has been declared All-German Supreme Kaiser. His political opponents are dissapearing and he consolidates his power over the nation. GLORY TO THE SUPREME KAISER!
+
 
 @president_schumacher
 title: Kurt Schumacher victorious
