@@ -65,4 +65,5 @@ Q.new_middle_nsdap -= 100;
 Q.rural_nsdap -= 100;
 Q.unemployed_nsdap -= 100;
 !}
+
 The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
