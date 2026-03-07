@@ -34,10 +34,10 @@ Germany is lost.
 - @game_over: Game over.
 
 @shhh
+on-arrival: chancellor_party = "SDP"; president = "Braun"; chancellor = "Provisional Chancellor Council"; Hitlertortured = 1; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+
 
 We managed to kidnap Hitler. We send him to Unit 731 in Manchuria so he can suffer for the rest of his life. Braun can now take power as President and call snap elections.
-
-on-arrival: president = "Braun"; Hitlertortured = 1; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 
 - @new_elections_hitler_byebye: Did we overreach?, nah we go plan elections now.
 
