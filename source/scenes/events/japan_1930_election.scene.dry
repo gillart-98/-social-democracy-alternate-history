@@ -1,1 +1,37 @@
+title: Japanese 1930 Elections
+new-page: true
+subtitle: The Japanese Empire hold its 1930 elections
+view-if: year = 1930 and (month = 2 or month = 3)
+max-visits: 1
+on-arrival:
+face-image: img/schutzbund.png
+tags: event
 
+= Japanese Elections 1930
+
+The Japanese People have cast their ballots, and the results are in...
+
+- @noprogress
+- @big_growth
+- @full_victory
+
+@noprogress
+title: Rikken Minseitō Wins
+on-arrival: japan_ruling_party = 'Rikken Minseitō'
+view-if: japan_left_influence < 60
+
+The Japanese left managed to barely gain any seats, however Rikken Minseitō won the elections. This could certainly be a curb for Japanese Militarism.
+
+@big_growth
+title: Rikken Minseitō Forms Coalition with the Japanese SDP
+on-arrival: japan_ruling_party = 'Rikken Minseitō-SDP'; japan_relation += 1;
+view-if: japan_left_influence >= 60 and japan_left_influence < 190
+
+The Japanese Social Democratic Party has managed to become a minor coalition partner of Rikken Minseitō, bolstering their influence in the government and dealing a major blow to right-wing forces in Japan. 
+
+@full_victory
+title: Japanese SDP Wins
+on-arrival: japan_ruling_party = 'JSDP'; japan_relation += 2;
+view-if: japan_left_influence >= 190
+
+The Japanese left has managed to win an election. Despite right wing attempts at destroying their influence, the Japanese Social Democratic Party has managed to come out on top. 
