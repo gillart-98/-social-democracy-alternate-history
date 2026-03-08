@@ -205,6 +205,6 @@ Fascist Italy remains a problem, and the Soviet Union also lies outside the syst
 
 @improve_japan
 title: Improve our relations with Japan.
-on-arrival: japan_relation += 2; sdp_take_interest_in_japan_government == 1
+on-arrival: japan_relation += 2; sdp_take_interest_in_japan_government = 1
 
 Japan has been in a tight spot politically, while being a valuable ally, their army regularly meddles in politics. However our nations have regularly cooperated and many of our universities house Japanese students. By improving relations we could have mutually beneficial cooperation.
