@@ -68,7 +68,7 @@ The Republican Party in America had been formed as a people's party, a coalition
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; japan_left_influence += 33; catholics_spd += 5; rural_spd += 5;
+on-arrival: resources -= 1; japan_left_influence += 33; catholics_spd += 5; rural_spd += 5; sdp_take_interest_in_japan_government == 1
 
 We can lean the Japanese Left a lot in their struggles, which they can use to their advantage in the next elections. In turn, the provide us with guidance on rural and catholic support.
 
