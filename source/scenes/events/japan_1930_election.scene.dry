@@ -3,7 +3,7 @@ new-page: true
 subtitle: The Japanese Empire hold its 1930 elections
 view-if: year = 1930 and (month = 2 or month = 3) and sdp_take_interest_in_japan_government = 1
 max-visits: 1
-on-arrival: sdp_take_interest_in_japan_government_check2 == 1
+on-arrival: sdp_take_interest_in_japan_government_check2 = 1
 face-image: img/schutzbund.png
 tags: event
 
