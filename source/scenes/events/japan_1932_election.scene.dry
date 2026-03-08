@@ -1,2 +1,37 @@
+title: Japanese 1930 Elections
+new-page: true
+subtitle: The Japanese Empire hold its 1932 elections
+view-if: year = 1932 and (month = 2 or month = 3) and japan_ruling_party == 'Rikken Seiyūkai'
+max-visits: 1
+on-arrival:
+face-image: img/schutzbund.png
+tags: event
 
-japan_ruling_party = 'Rikken Minseitō'
+= Japanese Elections 1932
+
+After the Mukden Incident, Rikken Minseitō's right wing silently deposed the prime minister and imposed a right wing government led by Tsuyoshi Inukai. They had begun arresting anti-war activists, however the elections could turn the tide in our favour.
+
+- @noprogress2
+- @big_growth2
+- @full_victory2
+
+@noprogress2
+title: 	Tsuyoshi Inukai's government Stays
+on-arrival: japan_ruling_party = 'Rikken Seiyūkai'
+view-if: japan_left_influence < 60
+
+The Japanese left managed to barely gain any seats, and while Tsuyoshi Inukai does oppose the military somewhat, the army had already shown it's power.
+
+@big_growth2
+title: Rikken Minseitō Forms Coalition with the Japanese SDP
+on-arrival: japan_ruling_party = 'Rikken Minseitō-SDP'; japan_relation += 1;
+view-if: japan_left_influence >= 60 and japan_left_influence < 190
+
+The Japanese Social Democratic Party has managed to become a minor coalition partner of Rikken Minseitō, who managed to win despite being unpopular. This bolsters left wing influence in the japanese government and spells humiliations for the japanese right. 
+
+@full_victory2
+title: Japanese SDP Wins
+on-arrival: japan_ruling_party = 'JSDP'; japan_relation += 2;
+view-if: japan_left_influence >= 190
+
+The Japanese left has managed to win an election. Despite right wing attempts at destroying their influence, the Japanese Social Democratic Party has managed to come out on top. 
