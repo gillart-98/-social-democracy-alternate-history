@@ -21,6 +21,7 @@ As we have control over the Interior Ministry, we can direct police and intellig
 - @ban_rfb: Ban the Communist RFB.
 - @unban_rfb: Unban the RFB.
 - @persecute_rfb
+- @ethniccleansing: Do some ethnic cleansing.
 - @root: Take no action for now.
 
 @ban_sa
@@ -84,3 +85,11 @@ view-if: rfb_banned = 1
 on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 5; dvp_relation += 5; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1
 
 We have arrested more of the RFB's leaders and confiscated their weapons.
+
+@ethniccleansing
+choose-if: interior_police_loyalty >= 0.3
+unavailable-subtitle: [? if interior_police_loyalty < 0.3 : The police are too disloyal to be trusted with this. ?]
+on-arrival: Q.catholics = -10; z_relation -= 10; kpd_relation -= 10; kpd_coalition_dissent += 1; rfb_strength += 50; prussian_police_loyalty += 0.05; interior_police_loyalty += 0.05; catholics_spd -= 5; catholics_kpd += 15; old_middle_dnvp += 5; old_middle_spd += 5;
+
+We ordered a "removal" of "undesirables" in Germany like Catholics, and this was enthusiastically carried out by the police, perhaps too enthusiastically. The DVNP, while always hating us, praised the acts. The Communist and Centre Parties condemned the acts, while many catholics were radicalized to the far-left.
+
