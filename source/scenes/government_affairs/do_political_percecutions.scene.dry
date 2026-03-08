@@ -5,8 +5,6 @@ tags: govt_affairs, cabinet
 on-arrival: month_actions += 1;
 view-if: spd_in_government = 1 and can_percecute_political_opponents = 1
 card-image: img/portraits/BreitscheidRudolf.jpg
-go-to: fp_menu
-#subtitle: International relations and dealing with Versailles.
 
 = Political Percecution
 
