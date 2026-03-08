@@ -1,0 +1,12 @@
+title: Mukden incident
+new-page: true
+subtitle: Explosives were detonated at Manchuria
+view-if: year = 1931 and (month = 11 or month = 12)
+max-visits: 1
+on-arrival: japan_ruling_party = 'Rikken Seiyūkai';
+face-image: img/schutzbund.png
+tags: event
+
+= Mukden incident
+
+On the night of 18 September a bomb was placed, probably by Captain Imada Shintaro of the Army Special Service Agency, near the tracks of the South Manchuria Railway at Mukden. This was the prelude for an invasion of Manchuria by the army, and caused the resignation of the Japanese government due to the inability to handle the incident. 
