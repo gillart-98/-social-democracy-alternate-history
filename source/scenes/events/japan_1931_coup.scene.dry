@@ -1,7 +1,7 @@
 title: Mukden incident
 new-page: true
 subtitle: Explosives were detonated at Manchuria
-view-if: year = 1931 and (month = 11 or month = 12)
+view-if: year = 1931 and (month = 11 or month = 12) and sdp_take_interest_in_japan_government_check2 = 1
 max-visits: 1
 on-arrival: japan_ruling_party = 'Rikken Seiyūkai';
 face-image: img/schutzbund.png
