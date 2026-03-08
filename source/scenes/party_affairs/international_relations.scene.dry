@@ -15,6 +15,7 @@ At the Labor and Socialist International, we can forge contacts with our fratern
 - @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
 - @comintern: Forget the second international - embed a spy in the Comintern's conference.
 - @america: Learn from the Republican Party's wide appeal in America.
+- @japan: Cooperate with the Japanese Left.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -62,6 +63,14 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; new_middle_spd += 3; old_middle_spd += 1; catholics_spd += 4; rural_spd += 4; radicalization += 1; rb_militancy += 0.05; west_relation += 1;
 
 The Republican Party in America had been formed as a people's party, a coalition between liberals and progressives. We can learn a lot from them in militancy and support!
+
+@japan
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; japan_left_influence += 33; catholics_spd += 5; rural_spd += 5;
+
+We can lean the Japanese Left a lot in their struggles, which they can use to their advantage in the next elections. In turn, the provide us with guidance on rural and catholic support.
 
 @reduce
 
