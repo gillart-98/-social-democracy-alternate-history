@@ -1,0 +1,32 @@
+title: Political Percecution
+new-page: true
+is-card: true
+tags: govt_affairs, cabinet
+on-arrival: month_actions += 1;
+view-if: spd_in_government = 1 and can_percecute_political_opponents = 1
+card-image: img/portraits/BreitscheidRudolf.jpg
+go-to: fp_menu
+#subtitle: International relations and dealing with Versailles.
+
+= Political Percecution
+
+Who are we politically percecuting next?
+
+- @persecutekpd: The KPD is extremist, wouldn't hurt arresting some of their leaders...
+- @persecuteright: The far-right is a serious problem, let go after them!
+- @persecutecentrists: These damn centrists ruin everything, lets percecute them!
+
+@persecutekpd
+on-arrival: workers_kpd -= 10; rural_kpd -= 10; old_middle_kpd -= 10; new_middle_kpd -= 10; unemployed_kpd -= 10; catholics_kpd -= 10;
+
+KPD leaders were arrested and many of their supporters were percecuted.
+
+@persecuteright
+on-arrival: workers_dnvp -= 10; rural_dnvp -= 10; old_middle_dnvp -= 10; new_middle_dnvp -= 10; unemployed_dnvp -= 10; catholics_dnvp -= 10; workers_nsdap -= 10; rural_nsdap -= 10; old_middle_nsdap -= 10; new_middle_nsdap -= 10; unemployed_nsdap -= 10; catholics_nsdap -= 10;
+
+DNVP and NSDAP leaders were rounded up at mass as we raided their homes. Supporters were percecuted.
+
+@persecutecentrists
+on-arrival: workers_dvp -= 10; rural_dvp -= 10; old_middle_dvp -= 10; new_middle_dvp -= 10; unemployed_dvp -= 10; catholics_dvp -= 10; workers_ddp -= 10; rural_ddp -= 10; old_middle_ddp -= 10; new_middle_ddp -= 10; unemployed_ddp -= 10; catholics_ddp -= 10; workers_z -= 10; rural_z -= 10; old_middle_z -= 10; new_middle_z -= 10; unemployed_z -= 10; catholics_z -= 10; coalition_dissent -= 3;
+
+Centrist leaders were arrested and many of their supporters were percecuted. Many were afraid to speak out against our percecutions.
