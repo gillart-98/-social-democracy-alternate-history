@@ -1,4 +1,4 @@
-title: Japanese 1930 Elections
+title: Japanese 1932 Elections
 new-page: true
 subtitle: The Japanese Empire hold its 1932 elections
 view-if: year = 1932 and (month = 2 or month = 3) and japan_ruling_party == 'Rikken Seiyūkai'
