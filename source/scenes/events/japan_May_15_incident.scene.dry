@@ -1,7 +1,7 @@
 title: May 15 incident 
 new-page: true
 subtitle: The Japanese PM gets assasinated
-view-if: year = 1932 and (month = 5 or month = 6) and japan_ruling_party == 'Rikken Seiyūkai'
+view-if: year = 1932 and (month = 5 or month = 6) and japan_ruling_party == 'Rikken Seiyūkai' and sdp_take_interest_in_japan_government_check2 = 1
 max-visits: 1
 on-arrival:
 face-image: img/schutzbund.png
