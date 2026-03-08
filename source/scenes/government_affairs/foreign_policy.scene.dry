@@ -17,6 +17,7 @@ What should our foreign policy priority be?
 - @improve_west
 - @improve_east
 - @improve_soviet
+- @improve_japan
 - @customs_union
 - @negotiate
 - @reduce_reparations
@@ -201,3 +202,9 @@ Along with France, Great Britain, and many other states of Western and Eastern E
 A major component of the union is the free movement of people and goods across the countries of Europe, as well as the stabilization of currency exchange rates. This provides new markets for German products and new sources of investment.
 
 Fascist Italy remains a problem, and the Soviet Union also lies outside the system. But for now, there is new hope for peace and prosperity throughout the continent.
+
+@improve_japan
+title: Improve our relations with Japan.
+on-arrival: japan_relation += 2;
+
+Japan has been in a tight spot politically, while being a valuable ally, their army regularly meddles in politics. However our nations have regularly cooperated and many of our universities house Japanese students. By improving relations we could have mutually beneficial cooperation.
