@@ -425,6 +425,7 @@ Q.east_relation = 0;
 Q.soviet_relation = 0;
 // Relations with Japan and Japanese left influence
 Q.japan_relation = 0;
+Q.japan_ruling_party = 'Rikken Seiyūkai';
 Q.japan_left_influence = 7;
 Q.japan_left_government = 0;
 // How much have we exposed the secret rearmament programs?
