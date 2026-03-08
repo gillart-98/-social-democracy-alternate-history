@@ -59,7 +59,7 @@ The Stalinists of the KPD insists on calling us "social fascists", suggesting th
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; new_middle_spd += 9; old_middle_spd += 6; catholics_spd += 13; rural_spd += 14; catholics_spd += 13; radicalization += 1; rb_militancy += 0.05; west_relation += 1;
+on-arrival: resources -= 1; new_middle_spd += 3; old_middle_spd += 1; catholics_spd += 4; rural_spd += 4; radicalization += 1; rb_militancy += 0.05; west_relation += 1;
 
 The Republican Party in America had been formed as a people's party, a coalition between liberals and progressives. We can learn a lot from them in militancy and support!
 
