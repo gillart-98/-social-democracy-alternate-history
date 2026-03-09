@@ -1,0 +1,29 @@
+title: Soviet 1929 Elections
+new-page: true
+subtitle: The Soviet Union holds elections.
+view-if: year = 1929 and (month = 3 or month = 4) and soviet_relation = 2
+max-visits: 1
+on-arrival: 
+face-image: img/schutzbund.png
+tags: event
+
+= Soviet Elections 1929
+
+The 1929 Soviet elections are the fiercest ones since the founding of the USSR. Ethnic tensions, anti-communist electoral campaigning and complaints about party privilege made this election heated. Opposition forces from the Orthodox Church and Left opposition would make their debut and many independents would be run. However our experts predict that these opposition forces will be unable to make a breakthrough on the ballot, however if we strategically support some canidates, we could make the Soviet Union friendlier to us.
+
+
+- @meddle_in_elections: We strategically support friendly canidates.
+- @let_the_ballot_cook: It's their democracy, not ours.
+
+@meddle_in_elections
+on-arrival: USSR_meddling = 1; resources -= 2; workers_kpd -= 3; soviet_relation += 2;
+subtitle: -2 resources
+unavailable-subtitle: We don't have enough resources
+choose-if: resources >= 2
+
+The CPSU canidates have won the elections, however a lot of our sponsored canidates have sucessfully gained seats in the All-Union Congress of Soviets, while nobody found out about our meddling. Stalin's Power has been put on a halt as he needed opposition support to continue his policy.
+
+@let_the_ballot_cook
+on-arrival:
+
+Soviet Democracy once again took it's turn as the CPSU won elections once again. The Left opposition and anti-communists were defeated by the CPSU, while General Secretary Stalin is getting increasingly powerful due to the CPSU's popularity.
