@@ -196,7 +196,7 @@ title: Appeal to Pan-asianism
 subtitle: Asian Unification?!?!?!
 unavailable-subtitle: [? if japan_relation < 5 : Our relations with Japan are not good enough. ?] [? if japan_ruling_party != 'JSDP' : The ruling Party of Japan is not interested in such a porject. ?]
 view-if: eu_progress > 1
-choose-if: soviet_relation >= 4; japan_relation >= 5; japan_ruling_party = 'JSDP'
+choose-if: soviet_relation >= 4; japan_relation >= 5; japan_ruling_party = "JSDP"
 on-arrival: eu_progress += 1; japan_relation += 1
 
 Japanese politics has long been sympathetic to the ideas of Pan-asianism, but those ideals have been harmed by their supremacist politics. Now with army influence cracked down upon, we can start popularizing a pan-asian union within Japan, while reducing anti-communism. Given our recent endavours with a pan-european Union, other continents should surely follow our example.
@@ -217,7 +217,7 @@ Fascist Italy remains a problem, and the Soviet Union also lies outside the syst
 
 @world_government
 title: We can sign the treaty of World Federalization
-view-if: soviet_relation >= 5 and japan_relation >= 5 and eu = 1 and japan_ruling_party = 'JSDP' and USSR_meddling = 1 and oneworldgov = 0
+view-if: soviet_relation >= 5 and japan_relation >= 5 and eu = 1 and japan_ruling_party = "JSDP" and USSR_meddling = 1 and oneworldgov = 0
 on-arrival: oneworldgov = 1; unemployed -= 2 if unemployed >= 10; inflation += 2 if inflation <= -2; inflation -= 1 if inflation >= 4.5; workers_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); old_middle_spd += 5*(1-dissent); rural_spd += 4*(1-dissent); catholics_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); pro_republic += 5; nationalism -= 5; budget += 1; economic_growth += 1; economic_growth += 1 if economic_growth < 3
 max-visits: 1
 achievement: eu
