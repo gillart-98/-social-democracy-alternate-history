@@ -57,7 +57,7 @@ Others: [+ other_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
+Next election: [? if braundictator = 0: [+ next_election_month : month +] [+ next_election_year +] ?] [? if braundictator = 1: Never ?]
 
 = Economics
 
