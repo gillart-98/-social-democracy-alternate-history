@@ -154,6 +154,7 @@ Q.rfb_banned_prussia = 0;
 Q.nazi_femboys = 0;
 Q.braundictator = 0;
 Q.Hitlertortured = 0;
+Q.everyonebanned = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
