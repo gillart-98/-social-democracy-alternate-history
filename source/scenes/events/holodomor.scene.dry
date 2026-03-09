@@ -1,0 +1,38 @@
+title: Poland and Romania Affected by Famine
+new-page: true
+subtitle: Droughts and famine hit Poland and Romania
+view-if: year = 1931 and (month = 6 or month = 7) and spd_in_government = 1 and foreign_minister_party = "SPD"
+max-visits: 1
+on-arrival: 
+face-image: img/schutzbund.png
+tags: event
+
+= Eastern Europe begins being affected by famine
+
+A wave of starvation has hit the Soviet Union, eastern Poland and Bessarabia, with many suffering from food shortages and droughts. This famine had been a major Humanitarian crisis, especially in Ukraine, which was already prone for Famine before. How should we respond to the famine?
+
+- @helpeastandsoviet: Help all affected areas
+- @helpeast: Help Poland and Romania
+- @nothelp: Let them figure it out themselves
+
+
+@helpeastandsoviet
+on-arrival: resources -= 2; soviet_relation += 3; east_relation += 2; kpd_relation += 5; kpd_coalition_dissent -= 2;
+subtitle: -2 resources
+unavailable-subtitle: [? if resources < 2 : We don't have enough resources. ?] [? if soviet_relation < 3 : The Soviets do not trust us enough. ?]
+choose-if: resources >= 2
+
+We send out aid to the Soviets, Poles and Romanians. This greatly reduced the famine's effects in the affected areas, while improving relations with those countries. The KPD was also pleased by our actions, with them praising the aiding of the Soviet Union in the Famine.
+
+@helpeast
+on-arrival: resources -= 1; east_relation += 2; kpd_relation -= 1; kpd_coalition_dissent += 1;
+subtitle: -1 resources
+unavailable-subtitle: [? if resources < 1 : We don't have enough resources. ?]
+choose-if: resources >= 1
+
+We decided to only send aid to Poland and Romania, due to our distrust of the Soviets and their distrust towards them. We would contain the Famine to the Soviet Union, but this would lose us some reputation.
+
+@nothelp
+on-arrival: z_relation -= 5; dvp_relation -= 5; kpd_relation -= 5; kpd_coalition_dissent += 1; coalition_dissent += 1
+
+We decided to not send out any aid, sparing money but losing reputation in the process. 
