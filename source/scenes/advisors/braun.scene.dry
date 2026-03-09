@@ -12,13 +12,10 @@ Braun [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Minister-P
 - @coalition
 - @prussian_bulwark
 - @snap_election
-- @the_god_emperor
-- @the_god_emperor_2
 - @root: Return to main
 
 @coalition
 title: Negotiating with the Coalition
-view-if: braundictator = 0
 subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
 choose-if: advisor_action_timer <= 0 and (spd_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not spd_prussia : The SPD does not control the Prussian government. ?]
@@ -36,26 +33,9 @@ go-to: prussian_affairs
 
 @snap_election
 title: Snap Election
-view-if: braundictator = 0
 subtitle: Call a snap election.
 unavailable-subtitle: [? if chancellor != "Braun" and president != "Braun" : Braun must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if president = "Braun" and presidential_powers : We have removed this power from the president with a constitutional reform. ?]
 choose-if: advisor_action_timer == 0 and (chancellor == "Braun" or (president == "Braun" and not presidential_powers))
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
 
 We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].@snap_election
-
-@the_god_emperor
-title: Cult of the Nation
-subtitle: Call a snap election.
-view-if: braundictator = 1
-on-arrival: advisor_action_timer = 6; economic_growth += 0.5; reichswehr_strength += 200; budget += 5;
-
-The People work under the Command of Braun, the Emperor and saviour of Germany.
-
-@the_god_emperor_2
-title: Demand Absolute Loyalty
-subtitle: Call a snap election.
-view-if: braundictator = 1
-on-arrival: advisor_action_timer = 6; workers_spd += 30; old_middle_spd += 30; new_middle_spd += 30; unemployed_spd += 30; rural_spd += 30;
-
-Braun consolidates his total grip on Germany and percecutes dissent.
