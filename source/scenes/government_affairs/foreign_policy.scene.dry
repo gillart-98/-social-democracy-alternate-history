@@ -196,7 +196,7 @@ title: Appeal to Pan-asianism
 subtitle: Asian Unification?!?!?!
 unavailable-subtitle: [? if japan_relation < 5 : Our relations with Japan are not good enough. ?] [? if japan_ruling_party != 'JSDP' : The ruling Party of Japan is not interested in such a porject. ?]
 view-if: eu_progress > 1
-choose-if: soviet_relation >= 4; japan_relation >= 5; japan_ruling_party = 'JSDP';
+choose-if: soviet_relation >= 4; japan_relation >= 5; japan_ruling_party = 'JSDP'
 on-arrival: eu_progress += 1; japan_relation += 1
 
 Japanese politics has long been sympathetic to the ideas of Pan-asianism, but those ideals have been harmed by their supremacist politics. Now with army influence cracked down upon, we can start popularizing a pan-asian union within Japan, while reducing anti-communism. Given our recent endavours with a pan-european Union, other continents should surely follow our example.
