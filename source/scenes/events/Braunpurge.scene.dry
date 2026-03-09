@@ -1,0 +1,19 @@
+title: All Quiet on the Political Front
+subtitle: ...
+view-if: year = 1930 and month = 12 and spd_prussia and braundictator = 1
+max-visits: 1
+tags: event
+new-page: true
+face-image: img/All_Quiet.jpg
+
+= All Quiet on the Political Front
+
+Mass Purges hit the shores of Germany, the supreme kaiser had ordered a mass execution of political dissidents. The NSDAP, KPD and Centre Party were all killed, one by one. The streets are filled with a creepy silence, without the mass voilence taking place. Where has everyone gone?
+
+- @silence: They were killed by the order of Supreme Kaiser Braun
+
+@silence
+on-arrival: sa_strength -= 500; sh_strength -= 500; rfb_strength -= 500; everyonebanned = 1; nsdap_leader = "No one"; z_party_leader = "No one"; z_leader = "No one"; kpd_party_leader = "No one"; kpd_leader = "No one"; hindenburg_oofed = 1;
+
+There is no one left, the opposition is all gone, everyone now serves one leader, Braun.
+
