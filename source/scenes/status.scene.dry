@@ -159,11 +159,9 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 = [? if everyonebanned = 0: Projected election results ?] [? if everyonebanned = 1: Loyalty to our leadership ?]
 
-[? if everyonebanned = 0: (if the election were to be held now):?]
+[? if everyonebanned = 0: (if the election were to be held now) ?]
 
-SPD: [+ spd_votes +]%
-
-[? if everyonebanned = 1: Disloyal Traitors: [+ non_sdp_parties_votes +]% ?]
+[? if everyonebanned = 1: Support for the ?]SPD: [+ spd_votes +]%
 
 [? if sapd_formed and everyonebanned = 0: SAPD: [+ sapd_votes +]% ?]
 
