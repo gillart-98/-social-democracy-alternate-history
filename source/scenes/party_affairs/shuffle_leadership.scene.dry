@@ -300,27 +300,27 @@ frequency: 1
 - @remove_none: Stop changing advisors.
 
 @centrist
-view-if: n_advisors < 3
+view-if: n_advisors < 3 and braundictator = 0
 
 - #center_advisor
 
 @reformist
-view-if: n_advisors < 3
+view-if: n_advisors < 3 and braundictator = 0
 
 - #reformist_advisor
 
 @left
-view-if: n_advisors < 3
+view-if: n_advisors < 3 and braundictator = 0
 
 - #left_advisor
 
 @labor
-view-if: n_advisors < 3
+view-if: n_advisors < 3 and braundictator = 0
 
 - #labor_advisor
 
 @neorev
-view-if: neorevisionism > 0 and n_advisors < 3
+view-if: neorevisionism > 0 and n_advisors < 3 and braundictator = 0
 
 - #neorev_advisor
 
