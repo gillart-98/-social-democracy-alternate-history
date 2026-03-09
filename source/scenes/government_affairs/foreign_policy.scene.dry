@@ -24,6 +24,8 @@ What should our foreign policy priority be?
 - @expose
 - @european_union
 - @european_union_2
+- @pan_asian_appeal
+- @world_government
 - @concordat_negotiate
 - @concordat
 - @support_austria
@@ -189,6 +191,16 @@ on-arrival: eu_progress += 1; west_relation += 1
 
 Forming a "United States of Europe" has long been part of the Social Democratic foreign program. Finally, we are taking steps towards it. Given our positive relations with the other countries of Europe, we can begin to hold multilateral negotiations for more European federalism. It will take time to hammer out the exact shape of this future "European Union", however.
 
+@pan_asian_appeal
+title: Appeal to Pan-asianism
+subtitle: Asian Unification?!?!?!
+unavailable-subtitle: [? if japan_relation < 5 : Our relations with Japan are not good enough. ?] [? if japan_ruling_party != 'JSDP' : The ruling Party of Japan is not interested in such a porject. ?]
+view-if: eu_progress > 1
+choose-if: soviet_relation >= 4; japan_relation >= 5; japan_ruling_party = 'JSDP';
+on-arrival: eu_progress += 1; japan_relation += 1
+
+Japanese politics has long been sympathetic to the ideas of Pan-asianism, but those ideals have been harmed by their supremacist politics. Now with army influence cracked down upon, we can start popularizing a pan-asian union within Japan, while reducing anti-communism. Given our recent endavours with a pan-european Union, other continents should surely follow our example.
+
 
 @european_union_2
 title: We can sign a treaty to form a European Union!
@@ -202,6 +214,17 @@ Along with France, Great Britain, and many other states of Western and Eastern E
 A major component of the union is the free movement of people and goods across the countries of Europe, as well as the stabilization of currency exchange rates. This provides new markets for German products and new sources of investment.
 
 Fascist Italy remains a problem, and the Soviet Union also lies outside the system. But for now, there is new hope for peace and prosperity throughout the continent.
+
+@world_government
+title: We can sign the treaty of World Federalization
+view-if: soviet_relation >= 5 and japan_relation >= 5 and eu = 1 and japan_ruling_party = 'JSDP' and USSR_meddling = 1
+on-arrival: oneworldgov = 1; unemployed -= 2 if unemployed >= 10; inflation += 2 if inflation <= -2; inflation -= 1 if inflation >= 4.5; workers_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); old_middle_spd += 5*(1-dissent); rural_spd += 4*(1-dissent); catholics_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); pro_republic += 5; nationalism -= 5; budget += 1; economic_growth += 1; economic_growth += 1 if economic_growth < 3
+max-visits: 1
+achievement: eu
+
+The European Union, Soviet Union, Republic of China, Chinese Soviet Republic, Mongolia, Tannu Tuva and the Japanese Empire have officially signed a treaty of world federalization. No longer will the world be divided by petty differences.
+
+A major component of the union is the free movement of people and goods across the world, while also creating a elected world assembly. No more divisions will plague this world as it moves towards unification.
 
 @improve_japan
 title: Improve our relations with Japan.
