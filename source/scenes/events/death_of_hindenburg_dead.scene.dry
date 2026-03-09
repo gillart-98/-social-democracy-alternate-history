@@ -1,0 +1,17 @@
+title: End of the game
+subtitle: The era of crisis closes
+new-page: true
+view-if: year = 1934 and month >= 7 and president != "Hindenburg" and hindenburg_oofed = 1;
+on-arrival: hindenburg_dead = 1
+max-visits: 1
+tags: event
+face-image: img/Hindenburg_head.jpg
+go-to: game_over_1934
+
+= The Death of Hindenburg
+
+We have assasinated Hindenburg, and begun dismantling democracy. Nazism has been destroyed, Monarchism had been destroyed. However at what cost... Have we become the tyrants we fought against? Tyrrany had taken over our hearts in the wake of threats against democracy, and German democracy is silently dying in the shadows as Braun consolidates his authority.
+
+Wilhelm II watches in horror as Germany slides into tyrrany from his exile in the Netherlands. His proud empire has turned into an tyrranical evil, under the Weimar Republic. The Black-Yellow-Red Banner has been tainted in blood, the events of 1919 had been repeated, however this time it has been targeted at all opponents of the SDP.
+
+The worst years of crisis are over, we have won, but at what cost?
