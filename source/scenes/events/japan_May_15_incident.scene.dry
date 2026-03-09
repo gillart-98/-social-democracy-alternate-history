@@ -31,6 +31,6 @@ We sat idly by as japanese rule of law withered.
 
 @do_own_shit
 subtitle: Hindenburg will be our target.
-on-arrival: sh_strength -= 1000; president = "Braun"; can_percecute_political_opponents = 1; old_middle_nsdap -= 5; unemployed_nsdap -= 5; rural_nsdap -= 5; old_middle_dnvp -= 50; new_middle_dnvp -= 50; unemployed_dnvp -= 50; rural_dnvp -= 50; catholics_dnvp -= 50; workers_dnvp -= 50; workers_sdp += 10; unemployed_sdp += 5; catholics_sdp += 5; rural_sdp += 5;
+on-arrival: sh_strength -= 1000; hindenburg_dead = 1; president = "Braun"; can_percecute_political_opponents = 1; old_middle_nsdap -= 5; unemployed_nsdap -= 5; rural_nsdap -= 5; old_middle_dnvp -= 50; new_middle_dnvp -= 50; unemployed_dnvp -= 50; rural_dnvp -= 50; catholics_dnvp -= 50; workers_dnvp -= 50; workers_sdp += 10; unemployed_sdp += 5; catholics_sdp += 5; rural_sdp += 5;
 
 We staged our own incident with the reichbanner on opposition leaders. Most importantly, Hindenburg was our target, as he stood in our way of absolute power. We staged a incident, where one of our guys pretended to be an Stahlhelm officer who would assasinate the incumbent president, who worked at the order of the DVNP. This gave the court a reason to percecute the DNVP. 
