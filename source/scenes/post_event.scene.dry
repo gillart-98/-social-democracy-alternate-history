@@ -470,6 +470,7 @@ if (choices && choices[0].title != "Continue...") {
 } else {
     has_event = 0;
 }
+Q.non_sdp_parties_votes = Q.z_votes + Q.ddp_votes + Q.dvp_votes + Q.other_votes + Q.dnvp_votes; + Q.nsdap_votes; + Q.kpd_votes;
 // pre-load all of the event images
 if (this.ui && this.ui.show_portraits) {
     for (var choice of choices) {
