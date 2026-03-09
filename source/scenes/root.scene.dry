@@ -448,6 +448,9 @@ Q.moderate_plan_progress = 0;
 // European Union negotiation process
 Q.eu = 0;
 Q.eu_progress = 0;
+// World Union
+Q.oneworldgov = 0;
+Q.USSR_meddling = 0;
 // science/education
 Q.science = 0;
 Q.education_science = 0;
