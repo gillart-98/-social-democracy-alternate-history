@@ -1,6 +1,6 @@
 title: Supreme Kaiser Braun
 is-pinned-card: true
-tags: advisor, reformist
+tags: advisor, supremekaiser
 card-image: img/portraits/BraunOtto.jpg
 view-if: braundictator = 1
 new-page: true 
@@ -36,6 +36,6 @@ title: Demand Absolute Loyalty
 subtitle: We will reign in the disloyal!
 choose-if: advisor_action_timer <= 0 and spd_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; workers_spd += 30; old_middle_spd += 30; new_middle_spd += 30; unemployed_spd += 30; rural_spd += 30; prussian_police_loyalty += 0.2; interior_police_loyalty += 0.2; Q.reichswehr_loyalty += 0.2;
+on-arrival: advisor_action_timer = 6; workers_spd += 30; old_middle_spd += 30; new_middle_spd += 30; unemployed_spd += 30; rural_spd += 30; prussian_police_loyalty += 0.2; interior_police_loyalty += 0.2; reichswehr_loyalty += 0.2;
 
 Braun consolidates his total grip on Germany and percecutes dissent.
