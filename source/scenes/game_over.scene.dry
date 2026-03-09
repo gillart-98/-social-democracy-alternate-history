@@ -331,6 +331,15 @@ go-to: eg_menu
 
 We have helped to form a European Union to bring peace and prosperity to the continent. Time will tell how effective it will be.
 
+@world_union
+title: The World Government has been formed
+view-if: oneworldgov = 1
+tags: endings
+go-to: eg_menu
+
+We have helped to form a World Union to bring peace and prosperity to the world. Time will tell how effective it will be.
+
+
 @achievements
 title: Achievements
 view-if: achievement_game_completed == 1
