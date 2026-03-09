@@ -1,0 +1,41 @@
+title: Supreme Kaiser Braun
+is-pinned-card: true
+tags: advisor, reformist
+card-image: img/portraits/BraunOtto.jpg
+view-if: braundictator = 1
+new-page: true 
+
+= Otto Braun is our glorious supreme kaiser, he will guide the nation to glory, and no one else will be needed but him!
+
+Braun 
+
+- @prussian_bulwark
+- @the_god_emperor
+- @the_god_emperor_2
+- @root: Return to main
+
+@prussian_bulwark
+title: The Prussian Bulwark
+subtitle: Before his accension as supreme Kaiser, our glorious leader was Minister-President of Prussia. He has thus experience there.
+choose-if: advisor_action_timer <= 0 and spd_prussia = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if spd_prussia == 0 : The SPD does not control Prussia. ?]
+on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
+go-to: prussian_affairs
+
+@the_god_emperor
+title: Cult of the Nation
+subtitle: We must make people work for the Nation
+choose-if: advisor_action_timer <= 0 and spd_prussia = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; economic_growth += 0.5; reichswehr_strength += 200; budget += 5;
+
+The People work under the Command of Braun, the Emperor and saviour of Germany.
+
+@the_god_emperor_2
+title: Demand Absolute Loyalty
+subtitle: We will reign in the disloyal!
+choose-if: advisor_action_timer <= 0 and spd_prussia = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; workers_spd += 30; old_middle_spd += 30; new_middle_spd += 30; unemployed_spd += 30; rural_spd += 30; prussian_police_loyalty += 0.2; interior_police_loyalty += 0.2; Q.reichswehr_loyalty += 0.2;
+
+Braun consolidates his total grip on Germany and percecutes dissent.
