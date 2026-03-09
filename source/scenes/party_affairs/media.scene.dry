@@ -14,6 +14,7 @@ The SPD runs a veritable media empire, with many newspapers throughout every Ger
 - @commercial
 - @campaign
 - @ideological
+- @totalitarian
 - @radio
 - @radio_2
 - @radio_3
@@ -25,6 +26,8 @@ The SPD runs a veritable media empire, with many newspapers throughout every Ger
 @commercial
 title: Make our newspapers more commercialized by broadening their appeal beyond party supporters.
 subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to socialist views.
+choose-if: braundictator = 0
+unavailable-subtitle: You want to appeal to prisoners?
 on-arrival: resources += 1; commercialized_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1-dissent); left_dissent += 10; labor_dissent += 10
 
 Our commercialized newspapers are able to bring in more funds. However, the left and labor factions express their displeasure.
@@ -32,6 +35,8 @@ Our commercialized newspapers are able to bring in more funds. However, the left
 @campaign
 title: The purpose of our media is to elect more Social Democrats.
 subtitle: Our newspapers will focus on the electoral campaign.
+choose-if: braundictator = 0
+unavailable-subtitle: What electoral campaign?
 on-arrival: campaign_media += 1; workers_spd += 4*(1 - dissent); unemployed_spd += 2*(1-dissent);
 
 Our campaign media is mostly reaching the workers who are already saturated with Socialist propaganda, but it must be doing *something*, or at least that is what we hope.
@@ -39,9 +44,19 @@ Our campaign media is mostly reaching the workers who are already saturated with
 @ideological
 title: We will have vibrant ideological debate within our newspapers.
 subtitle: There will be space for all factions to air their views.
+choose-if: braundictator = 0
+unavailable-subtitle: Do you think we are just going to let ourselves get divided?
 on-arrival: left_dissent -= 6; labor_dissent -= 6; center_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
 
 This has been our media course historically, and it has successfully paved over the many tensions in our party.
+
+@totalitarian
+title: The purpose of our media is to convey the glory of our Supreme Kaiser.
+subtitle: We are the only legal newspapers, which will convey total propaganda.
+view-if: braundictator = 1
+on-arrival: workers_spd += 4; unemployed_spd += 4; new_middle_spd += 4; old_middle_spd += 4;
+
+Indoctrination will be the goal of our media, the people must be completly loyal to Supreme Kaiser Braun.
 
 @radio
 title: Why not fund a radio station?
