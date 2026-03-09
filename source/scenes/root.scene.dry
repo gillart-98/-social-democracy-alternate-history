@@ -123,6 +123,8 @@ Q.nsdap_leader = "Hitler";
 Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
 Q.hindenburg_enabled = 0;
+// Checks is Hindenburg died before the ending
+Q.hindenburg_dead = 0;
 
 
 // Does the SPD lead in Prussia?
