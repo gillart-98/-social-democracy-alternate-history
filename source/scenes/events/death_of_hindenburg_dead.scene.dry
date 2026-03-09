@@ -1,7 +1,7 @@
 title: End of the game
 subtitle: The era of crisis closes
 new-page: true
-view-if: year = 1934 and month >= 7 and president != "Hindenburg" and hindenburg_oofed = 1;
+view-if: year = 1934 and month >= 7 and president != "Hindenburg" and hindenburg_oofed = 1
 on-arrival: hindenburg_dead = 1
 max-visits: 1
 tags: event
