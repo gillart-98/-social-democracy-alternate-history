@@ -1,0 +1,11 @@
+title: 1938
+subtitle: A new year
+new-page: true
+tags: event
+priority: 2
+view-if: year >= 1938 and month >= 1
+max-visits: 1
+
+= 1938
+
+The world is on edge as a powderkeg had exploded in Asia, A war had begun between Japan and China. [? if austria_defeat = 1: Meanwhile Austrian Nazis have been plotting a coup in Austria, and when they overthrow the Austrian Government, they will surely invade us. ?] This year is looking increasingly dire...
