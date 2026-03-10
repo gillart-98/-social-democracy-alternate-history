@@ -1,0 +1,19 @@
+title: 1936
+subtitle: A new year
+new-page: true
+tags: event
+priority: 2
+view-if: year >= 1936 and month >= 1
+max-visits: 1
+on-arrival: {!
+if (Q.unemployed >= 10) {
+    Q.unemployed -= 4;
+    Q.inflation -= 1;
+}
+!}
+
+= 1936
+
+This year, Italy has begun it's agression against Ethiopia. World tensions are growing and this year is bound to be unstable. However Germany will truimph over the threats that it faces, so that fascism will be defeated!
+
+The crisis is healing and the economy is recovering, while inflation is falling. It seems like democracy is healing itself.
