@@ -18,8 +18,8 @@ The [+ japan_ruling_party +] government had been unstable, but it managed to red
 
 @samecoalitionjap
 title: Rikken Minseitō-SDP Coalition survives
-on-arrival: japan_ruling_party = 'Rikken Minseitō-SDP' and kpd_relation > 5
-view-if: japan_left_influence < 100
+on-arrival: japan_ruling_party = 'Rikken Minseitō-SDP'
+view-if: japan_left_influence < 100 and kpd_relation > 5
 
 The Rikken Minseitō-SDP coalition managed to survive, although it had been porposed to the SDP to join the Social Masses Party, it had been decided by the Japanese SDP to not join. This might have been a victory, but things are still not looking stable.  
 
