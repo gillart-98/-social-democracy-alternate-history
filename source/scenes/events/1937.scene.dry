@@ -1,0 +1,17 @@
+title: 1937
+subtitle: A new year
+new-page: true
+tags: event
+priority: 2
+view-if: year >= 1937 and month >= 1
+max-visits: 1
+on-arrival: {!
+if (Q.unemployed >= 10) {
+    Q.unemployed -= 4;
+    Q.inflation -= 1;
+}
+!}
+
+= 1937
+
+Tensions are rising in Europe, and our future is uncertain. This year will be very unstable for the world as multiple wars are brewing in Europe and the Spanish civil war is ongoing. It seems like we were spared from the disasters of the far-right...
