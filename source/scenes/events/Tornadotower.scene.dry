@@ -1,0 +1,17 @@
+title: Tornado Destroys radio tower
+new-page: true
+subtitle: Tornado Destroys wooden radio tower in Langenberg
+tags: event
+view-if: year == 1935 and month == 10
+max-visits: 1
+
+= Tornado Destroys wooden radio tower in Langenberg
+
+In 1934 the T-aerial was replaced by an aerial hanging from a 160-metre wood framework tower and the transmission power was increased to 100 kW. However, this tower was destroyed on October 10, 1935 by a tornado. This exposes the inefficiency of using radio towers.
+
+- @replace_tower: We should replace it
+
+@replace_tower
+on-arrival: rural_nsdap -= 5; rural_dnvp -= 5;
+
+Almost nobody disagreed with our plan to replace it except the far-right. This destroyed their popularity
