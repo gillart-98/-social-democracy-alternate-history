@@ -1,0 +1,12 @@
+title: Japanese 1936 Elections
+new-page: true
+subtitle: The Japanese Empire hold its 1932 elections
+view-if: year = 1936 and (month = 2 or month = 3) and japan_ruling_party == 'Rikken Seiyūkai' and sdp_take_interest_in_japan_government_check2 = 1
+max-visits: 1
+on-arrival: japan_ruling_party = 'Imperial Japanese Army'
+face-image: img/schutzbund.png
+tags: event
+
+= Japanese Elections 1936
+
+Japanese Elections were held, and no matter what we do, it is too late. Some days after the elections, the February 26 incident would happen, which would threaten the government. Despite the coup's failure, the army had consolidated power and nothing could stop Japanese fascism from rising...
