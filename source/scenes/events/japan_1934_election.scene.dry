@@ -1,0 +1,45 @@
+title: Japanese 1934 Elections
+new-page: true
+subtitle: The Japanese Empire hold its 1934 elections
+view-if: year = 1934 and (month = 1 or month = 2) and japan_ruling_party != 'Rikken Seiyūkai'
+max-visits: 1
+on-arrival:
+face-image: img/schutzbund.png
+tags: event
+
+= Japanese Elections 1934
+
+The [+ japan_ruling_party +] government had been unstable, but it managed to reduce much army influence. However the SDP has been increasingly getting friendly with factions of the Military and thus had collapsed in popularity. This caused a rift to occur that split the coalition while snap elections were held. Our influence will decide the fate of Japan...
+
+- @samecoalitionjap
+- @leftcoalitionjap
+- @communistjap
+- @socmassleftvict
+
+@samecoalitionjap
+title: Rikken Minseitō-SDP Coalition survives
+on-arrival: japan_ruling_party = 'Rikken Minseitō-SDP' and kpd_relation > 5
+view-if: japan_left_influence < 100
+
+The Rikken Minseitō-SDP coalition managed to survive, although it had been porposed to the SDP to join the Social Masses Party, it had been decided by the Japanese SDP to not join. This might have been a victory, but things are still not looking stable.  
+
+@leftcoalitionjap
+title: Shakai Taishūtō wins elections
+on-arrival: japan_ruling_party = 'Shakai Taishūtō'; japan_relation += 1;
+view-if: japan_left_influence >= 100 and japan_left_influence < 190
+
+The Social Masses Party Managed to win elections, as a massive coalition of Left-wing Parties. With This victory, it has become a major force in Japanese Politics. However the factions are split between Moderates, Nationalists and Socialists.
+
+@communistjap
+title: The Japanese Communist Party wins elections
+on-arrival: japan_ruling_party = 'JCP'; workers_kpd += 6; 
+view-if: japan_left_influence < 100 and kpd_relation <= 5
+
+The ruling coalition was voted out of Power, however the reformed JCP has managed to win elections. Exploiting the frustrations of the Japanese public, they quickly gained popularity. This comes as a victory for the KPD, who see this as a major victory.
+
+@socmassleftvict
+title: Social Masses Party Wins
+on-arrival: japan_ruling_party = 'Lefist Shakai Taishūtō'; japan_relation += 2;
+view-if: japan_left_influence >= 190
+
+The Social Masses Party Managed to win elections with a complete landslide, as a massive coalition of Left-wing Parties. With This victory, it has become a major force in Japanese Politics. This made it so that the left could consolidate it's power in the Social Masses Party.
