@@ -1,0 +1,28 @@
+title: Macro Polo Incident
+new-page: true
+subtitle: The Japanese and Chinese Began exchanging fire
+tags: event
+view-if: year = 1937 and (month = 7 or month = 8)
+max-visits: 1
+
+= Macro Polo Incident
+
+Today the Macro Polo incident occured...
+
+- @japannationalist
+- @japanleftist
+
+@japannationalist
+title: Japan started their agression against China
+on-arrival: 
+view-if: japan_ruling_party = 'Rikken Seiyūkai' or japan_ruling_party = 'Imperial Japanese Army'
+
+On the night of 7 July 1937, Chinese and Japanese troops exchanged fire in the vicinity of the Marco Polo (or Lugou) Bridge about 16 km from Beijing. The initial confused and sporadic skirmishing was escalated into a full-scale battle weeks later. This gave the Fascist Japan then the perfect justification for war against China.
+
+@japanleftist
+title: China started a "reclaimation war" against Japan
+on-arrival: 
+view-if: japan_ruling_party = 'Rikken Minseitō-SDP' or japan_ruling_party = 'Lefist Shakai Taishūtō' or japan_ruling_party = 'JCP'
+
+On the night of 7 July 1937, Chinese and Kwantung Army troops exchanged fire in the vicinity of the Marco Polo (or Lugou) Bridge about 16 km from Beijing. They would be easily crushed in a few days, however Chiang claimed that the Japanese and Chinese Communists planned the incident to weaken the KMT, and declared war on both.
+
