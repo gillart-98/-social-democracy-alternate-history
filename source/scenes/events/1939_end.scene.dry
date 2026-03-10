@@ -1,0 +1,14 @@
+title: A New Day in Germany
+subtitle: Has democracy finally triumphed?
+tags: event
+priority: 3
+view-if: year >= 1939 and month >= 1 and president != "Hitler" and president != "Göring" and president != "Seldte"
+max-visits: 1
+on-arrival: {!
+!}
+new-page: true
+go-to: game_over_1934
+
+= A New Day in Germany
+
+Tensions are higher than ever in the world... We contained the nazi threat, however many fear a second world war on the horizon as tensions rise in the world. [? if west_relation <= 2 : The West does not trust us fully, and they might attempt an invasion of our homeland. ?] [? if east_relation <= 2 : Polish Agression might become an problem for our democracy. ?] [? if soviet_relation <= 2 : The Soviets might be looking to expand into our borders. ?] [? if japan_relation <= 2 : Japan might become a future threat if they keep expanding. ?] And Italy will look to our borders for Roman ambitions.
