@@ -2,13 +2,12 @@ title: Second Italo-Ethiopian War
 new-page: true
 subtitle: Italian General Emilio De Bono invades Ethiopia
 tags: event
-view-if: year == 1935 and month == 10
+view-if: year == 1935 and month == 10 and spd_in_government = 1 and foreign_minister_party = "SPD"
 max-visits: 1
 
 = Second Italo-Ethiopian War
 
-Despite their disastrous attempt to colonize Ethiopia in the First Italo-Ethiopian War, they tried again a second time. They quickly siezed many lands with relentless offensives. [? spd_in_government = 1 and foreign_minister_party = "SPD" : Our ministry must be prepared to respond to this agression ?] 
-
+Despite their disastrous attempt to colonize Ethiopia in the First Italo-Ethiopian War, they tried again a second time. They quickly siezed many lands with relentless offensives.
 - @Callsancionsagainstita: Call for sancions against italy
 - @Militarizationtreaty: Attempt to loosen military restrictions
 - @nothing: There is nothing we can do
