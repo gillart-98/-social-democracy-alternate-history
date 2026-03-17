@@ -16,7 +16,7 @@ The SPD cannot govern by itself yet. Because we do not have an electoral majorit
 - @center: Strengthen our bonds with the Catholic Center Party.
 - @kpd: Work towards repairing relationships with the Communist Party.
 - @dnvp: Work towards creating new ties with the DNVP.
-- @relationswithnazis: Build relations with NSDAP.
+- @nsdap_0: Build relations with NSDAP.
 - @spd_alone: The SPD can stand alone for now.
 - @easy_discard
 
@@ -123,7 +123,7 @@ on-arrival: resources -= 1; dnvp_relation += 5*(1 - dissent)
 
 The DNVP is certainly an interesting option to improve relations with, as they're Hard-right at their core, but we managed to establish better ties with their leadership.
 
-@relationswithnazis
+@nsdap_0
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
