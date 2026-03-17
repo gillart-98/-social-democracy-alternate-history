@@ -127,7 +127,7 @@ The DNVP is certainly an interesting option to improve relations with, as they'r
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-go-to: nsdap_1 if nsdap_relation < 40; nsdap_2 if nsdap_relation >= 40;
+go-to: nsdap_1 if nsdap_relation < 40; nsdap_2 if nsdap_relation >= 40
 
 What can i say...
 
