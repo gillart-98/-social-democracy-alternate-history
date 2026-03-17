@@ -123,6 +123,7 @@ on-arrival: resources -= 1; dnvp_relation += 5*(1 - dissent)
 
 The DNVP is certainly an interesting option to improve relations with, as they're Hard-right at their core, but we managed to establish better ties with their leadership.
 
+
 @nsdap_0
 subtitle: -1 resources
 choose-if: resources >= 1
