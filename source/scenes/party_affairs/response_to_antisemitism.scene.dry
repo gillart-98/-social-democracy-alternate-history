@@ -14,6 +14,7 @@ Antisemitism has long been a latent feature of German society, but since the beg
 - @socialism_of_fools: Antisemitism is the "socialism of fools". We will defeat them with real socialism.
 - @if: Antisemitism is a crisis. Direct the full force of the Iron Front against antisemitism.
 - @all: All Germans will suffer from fascism, not just the Jews. We do not need a separate policy for them.
+- @asshollepolitik: Actually the 🧃 suck
 
 @socialism_of_fools
 
@@ -27,3 +28,8 @@ We develop an entire campaign against antisemitism under the auspices of the Iro
 @all
 
 We do not need any special treatment for minorities.
+
+@asshollepolitik
+on-arrival: pacifism -= 1; nationalism += 5*(1-dissent); catholics_spd -= 6*(1-dissent); workers_spd += 6*(1-dissent); relation_nsdap += 5; relation_kpd -= 5; relation_z -= 5; relation_ddp -= 5; relation_dvp -= 5;
+
+We decide to make an entire rant about how Jewish people suck. The centre absolutely hated it but the NSDAP gladly accepted our rethoric.
