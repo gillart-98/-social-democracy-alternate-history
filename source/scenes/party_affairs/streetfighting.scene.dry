@@ -18,6 +18,8 @@ We must do something to protect the workers against these predations.
 - @prussian_police_training: Use the Prussian police to help train the Reichsbanner.
 - @peace: Try to avoid all militant confrontations, as much as possible.
 - @truce_rfb: Try to make peace with the RFB.
+- @truce_sh: Try to make peace with the Stahlhelm.
+- @truce_sa: Try to make peace with the SA.
 - @easy_discard
 
 @battle
@@ -63,3 +65,19 @@ unavailable-subtitle: The KPD is not interested.
 on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
 
 We have made at least a temporary truce with the KPD, so that our respective paramilitaries will stop fighting.
+
+@truce_sh
+choose-if: dnvp_relation >= 45
+view-if: kpd_truce == 0
+unavailable-subtitle: The DNVP is not interested.
+on-arrival: dnvp_relation += 5; sh_strength += 50; rb_strength += 50; sa_strength += 50;
+
+We have made at least a temporary truce with the DNVP, so that our respective paramilitaries will stop fighting.
+
+@truce_sa
+choose-if: nsdap_relation >= 45
+view-if: kpd_truce == 0
+unavailable-subtitle: The Nazis are not interested.
+on-arrival: nsdap_relation += 5; sa_strength += 50; rb_strength += 50; rfb_strength += 50;
+
+We have made at least a temporary truce with the NSDAP, so that our respective paramilitaries will stop fighting.
