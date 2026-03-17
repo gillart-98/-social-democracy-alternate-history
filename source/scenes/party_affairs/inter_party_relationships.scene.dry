@@ -15,6 +15,8 @@ The SPD cannot govern by itself yet. Because we do not have an electoral majorit
 - @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
 - @center: Strengthen our bonds with the Catholic Center Party.
 - @kpd: Work towards repairing relationships with the Communist Party.
+- @dnvp: Work towards creating new ties with the DNVP.
+- @nsdap: Build relations with NSDAP.
 - @spd_alone: The SPD can stand alone for now.
 - @easy_discard
 
@@ -112,6 +114,32 @@ on-arrival: dvp_relation += 5*(1 - dissent)
 The liberal parties (both the [+ ddp_name +] and DVP) are electorally moribund, so perhaps our efforts are best spent elsewhere.
 
 However, given the influence of the DVP among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+
+@dnvp
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; dnvp_relation += 5*(1 - dissent)
+
+The DNVP is certainly an interesting option to improve relations with, as they're Hard-right at their core, but we managed to establish better ties with their leadership.
+
+@nsdap
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+go-to: nsdap_1 if kpd_relation < 40; nsdap_2 if kpd_relation >= 40;
+
+@nsdap_1
+on-arrival: nsdap_relation += 6*(1 - dissent); left_dissent += 2; z_relation -= 2; dvp_relation -= 3; kpd_relation -= 3
+
+Oh boy...
+
+The Nazis are suspicious of our overtures, as they still persist on calling us "Jewish controlled Socialists". However, connections are made at the grassroots and local levels.
+
+@nsdap_2
+on-arrival: nsdap_relation += 6*(1 - dissent); left_dissent += 5; z_relation -= 9; dvp_relation -= 9; kpd_relation -= 9;
+
+The SPD and NSDAP have begun making open relations, however everyone else is absolutely hating us.
 
 @spd_alone
 
