@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = ""Social" "Democracy": An Alternate History i bred in ohio" + '_' + "Gillart-98";
+  var TITLE = "Social ehh it could be more democratic: An Alternate History i bred in ohio" + '_' + "Gillart98";
 
   // the url is a link to game.json
   // test url: https://aucchen.github.io/social_democracy_mods/v0.1.json
