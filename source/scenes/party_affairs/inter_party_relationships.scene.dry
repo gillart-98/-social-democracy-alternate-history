@@ -129,10 +129,10 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 go-to: nsdap_1 if nsdap_relation < 40; nsdap_2 if nsdap_relation >= 40;
 
+What can i say...
+
 @nsdap_1
 on-arrival: nsdap_relation += 6*(1 - dissent); left_dissent += 2; z_relation -= 2; dvp_relation -= 3; kpd_relation -= 3
-
-Oh boy...
 
 The Nazis are suspicious of our overtures, as they still persist on calling us "Jewish controlled Socialists". However, connections are made at the grassroots and local levels.
 
