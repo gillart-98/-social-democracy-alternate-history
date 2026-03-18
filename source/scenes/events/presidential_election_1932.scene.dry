@@ -26,6 +26,7 @@ Many are calling for us to support the incumbent Hindenburg, despite his well-kn
 - @support_hindenburg: Support Hindenburg.
 - @support_braun: Run Otto Braun of the SPD.
 - @support_thalmann: Support Ernst Thälmann of the KPD.
+- @support_thalmann: Support the Nazi canidate, [+ nsdap_candidate +].
 
 @support_hindenburg
 subtitle: This is the default option.
@@ -164,6 +165,23 @@ go-to: braun_campaign
 We failed to convince the DVP to support Braun.
 
 
+@support_hitler
+choose-if: nsdap_relation >= 50
+unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?]
+
+Supporting Nazis is actually fucking evil and retarded. Are we sure?
+
+- @support_hitler_2: Yes, we will support [+ nsdap_candidate +]. Yes, we will become the allegations.
+- @support_thalmann: Support Thälmann instead.
+- @support_braun: Support Braun instead.
+- @support_hindenburg: Support Hindenburg instead.
+
+@support_hitler_2
+on-arrival: spd_support_hitler = 1; left_dissent += 15; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; nsdap_relation += 10; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; kpd_relation -= 15
+
+Fine. We have thrown our support to the GODAMN NAZIS.
+
+- @final_election: The final vote...
 
 @final_election
 on-arrival: election_round = 0
@@ -210,6 +228,12 @@ if (Q.braun_campaign) {
 } else if (Q.spd_support_thalmann) {
     Q.thalmann_votes += Q.kpd_normalized;
     Q.thalmann_votes += Q.spd_normalized;
+    Q.hindenburg_votes += Q.z_normalized;
+    Q.hindenburg_votes += Q.ddp_normalized;
+    Q.hindenburg_votes += Q.dvp_normalized;
+} else if (Q.spd_support_hitler) {
+    Q.thalmann_votes += Q.kpd_normalized;
+    Q.hitler_votes += Q.spd_normalized;
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.ddp_normalized;
     Q.hindenburg_votes += Q.dvp_normalized;
@@ -287,6 +311,7 @@ There is no majority in this round. In the second round, any candidate who wins 
 - @round2_convince_kpd: Convince the KPD to switch their support to us. 
 - @round2_hindenburg: Switch our support to Hindenburg.
 - @round2_thalmann: Switch our support to Thälmann of the KPD.
+- @round2_kitler: Switch our support to the NSDAP canidate.
 - @round2_vote: Let the second round voting begin.
 
 
@@ -401,6 +426,27 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 
 - @round2_vote: Let the second round voting begin.
 
+@round2_kitler
+view-if: spd_support_hitler == 0 and kpd_support_thalmann == 0
+choose-if: nsdap_relation >= 50 and left_strength > reformist_strength 
+unavailable-subtitle: [? if nsdap_relation < 50 : We do not have good enough relations with the Nazis, so they are not even willing to accept our support. ?] 
+max-visits: 1
+
+ARE YOU SERIOUSLY DOING THIS?!?!?!
+
+- @round2_kitler_2: Yes, and fuck you.
+- @round2_menu: Never mind.
+
+@round2_kitler_2
+on-arrival: spd_support_hitler = 1; left_dissent += 15; labor_dissent += 10; center_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; nsdap_relation += 10; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; kpd_relation -= 15
+on-departure: z_support_braun = 0; kpd_support_braun = 0;
+
+Fine. We have thrown our support to the Nazis.
+
+[? if z_support_braun : The Center Party is confused at our capricious behavior, and have switched their support to Hindenburg. ?]
+
+- @round2_vote: Let the second round voting begin.
+
 @round2_hindenburg
 view-if: braun_campaign > 0 or spd_support_thalmann > 0
 on-arrival: braun_campaign = 0; spd_support_thalmann = 0
@@ -430,13 +476,23 @@ Ernst Thälmann of the KPD has won the presidency. Immediately, the far-right la
 - @civil_war: This is civil war.
 
 @hitler_wins
-on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party = "NSDAP"
+on-arrival: president = nsdap_candidate; chancellor = "Hitler" if spd_support_hitler == 0 or chancellor_party != "SPD"; chancellor_party = "NSDAP" if spd_support_hitler == 0 or chancellor_party != "SPD";
+go-to: hitlerguybad if spd_support_hitler == 0; spdandhitlerbad if spd_support_hitler == 1
 
 [? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
+[? if nsdap_candidate != "Hitler" and (chancellor_party != "SPD" or spd_support_hitler == 0) : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
+[? if nsdap_candidate != "Hitler" and chancellor_party == "SPD" and spd_support_hitler == 1: The NSDAP candidate [+ president +] has won. However they decided to respect our chancellor since we supported them in the campaign. ?]
+ 
+@hitlerguybad
+
+This is fucking BAD!
 
 - @hitler_takes_power: What do we do now?
 
+ 
+@spdandhitlerbad
+
+We have done it, turned ourselves into nazis!
 
 @braun_wins
 on-arrival: president = "Braun"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
