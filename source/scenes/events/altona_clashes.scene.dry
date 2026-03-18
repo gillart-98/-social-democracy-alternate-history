@@ -12,6 +12,7 @@ The Nazi SA is planning a march through Altona, a working-class neighborhood of 
 - @ban_march: Ban the march before it starts.
 - @allow_police: Allow the march, with a heavy police presence.
 - @allow_no_police: Allow the march without a police presence.
+- @join_march: Join in on the March.
 
 @ban_march
 choose-if: judicial_reform >= 2
@@ -41,3 +42,10 @@ When the march arrives in Altona, they are immediately confronted by an angry cr
 on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1
 
 When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. Gunshots are heard, reportedly from rooftop snipers. In response, the SA engage the surrounding crowd and fire at the surrounding buildings. Dozens are killed, mostly civilians. The Nazis recruit off their dead martyrs.
+
+@join_march
+choose-if: nsdap_relation >= 45
+unavailable-subtitle: The Nazis do not trust us enough.
+on-arrival: nsdap_relation += 15; workers_nsdap += 5; unemployed_nsdap += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; kpd_relation -= 10; coalition_dissent += 2; communist_coalition -= 2; sa_strength += 100; sa_militancy += 0.1; rfb_strength += 50; sh_strength += 50
+
+When the march arrives in Altona, they are immediately confronted by an angry crowd of communists, however the combined forces of the reichsbanner and the SA would manage to control the crowd. [? if in_grand_coalition : Our coalition partners in the government are outraged at our display with the Nazis, as our coalition was supposed to be against the far-right and are threatening to break up the government. ?] The KPD is obviously heavily objecting to our marches with the Nazis and have now proof of their "social fascist" theory.
