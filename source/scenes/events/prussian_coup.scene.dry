@@ -22,13 +22,32 @@ title: Fight against the overthrow attempt!
 subtitle: Labor will call a general strike. The Reichsbanner and the loyal elements of the Prussian police will resist the coup.
 unavailable-subtitle: We do not have the forces to resist.
 choose-if: rb_strength*rb_militancy >= 200
+go-to: defend_1 if dnvp_relation < 40 and nsdap_relation < 40; defend_2 if dnvp_relation >= 40 and nsdap_relation < 40; defend_3 if dnvp_relation < 40 and nsdap_relation >= 40; defend_4 if dnvp_relation >= 40 and nsdap_relation >= 40   
+
+@defend_1
 
 The Reichswehr and Stahlhelm are already surrounding Berlin, and the SA is supporting them. This could be civil war. We do realize that, correct? 
 
-- @defend_2: We will fight, even if it leads to a civil war.
+- @defend_next: We will fight, even if it leads to a civil war.
 - @surrender
 
 @defend_2
+on-arrival: sa_strength *= 0.6; pro_republic -= 5; workers_spd += 6; unemployed_spd += 6; workers_nsdap -= 6; unemployed_nsdap -= 6; coup_victory = 1
+
+The Reichswehr is already surrounding Berlin, and the SA is supporting them. However the Stahlhelm, with friendly relations to us, supported our government in Prussia. and we sucessfully fought off the coup attempt. 
+
+
+@defend_3
+on-arrival: sh_strength *= 0.6; pro_republic -= 10; workers_spd += 6; unemployed_spd += 6; workers_nsdap += 6; unemployed_nsdap += 6; coup_victory = 1
+
+Reichswehr and Stahlhelm are already surrounding Berlin. But with the SA began fighting the overthrow attempt, with the NSDAP supporting us. Meanwhile the Stahlhelm tried to coordinate with the RFB to get them on their side, but it was too late for them...
+
+@defend_4
+on-arrival: pro_republic -= 10; workers_spd += 16; unemployed_spd += 16; workers_nsdap += 6; unemployed_nsdap += 6; coup_victory = 1
+
+Oh that foolish Chancellor [+ chancellor +], thinking he could overthrow us with the help of the far-right. Pathetic, the far-right is loyal to us, both the SA and Stahlhelm are on our side, while the fools who did try to overthrow us were easily crushed. 
+
+@defend_next
 on-arrival: resist_coup = 1; defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if spd_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy*(1-reichswehr_loyalty)/2; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100);
 go-to: defend_2_civil_war if defense_strength < enemy_strength; defend_2_victory if defense_strength >= enemy_strength
 
