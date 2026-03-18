@@ -566,7 +566,7 @@ A radical Centre coalition is impossible.
 
 
 @nationalist_coalition_possible
-on-arrival: spd_in_government = 1; chancellor = "Wels" chancellor_party = "SDP"; finance_minister_party = "DNVP"; interior_minister_party = "DNVP"; economic_minister_party = "DNVP"; labor_minister_party = "DNVP"; foreign_minister_party = "DNVP"; agriculture_minister_party = "DNVP"; reichswehr_minister = "DNVP"; leverage = spd_r;
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SDP"; finance_minister_party = "DNVP"; justice_minister_party = "DNVP"; interior_minister_party = "DNVP"; economic_minister_party = "DNVP"; labor_minister_party = "DNVP"; foreign_minister_party = "DNVP"; agriculture_minister_party = "DNVP"; reichswehr_minister = "DNVP"; leverage = spd_r;
 go-to: ministries
 
 Otto Wels was appointed as Chancellor of the cabinet by an agreement between the SPD and DNVP. Now, we have our pick of ministries.
@@ -591,7 +591,7 @@ A Social Nationalist coalition is impossible.
 
 
 @social_nationalist_coalition_possible
-on-arrival: spd_in_government = 1; chancellor = "Wels" chancellor_party = "SDP"; finance_minister_party = "DNVP"; interior_minister_party = "NSDAP"; .justice_minister_party = I"; economic_minister_party = "DNVP"; labor_minister_party = "DNVP"; foreign_minister_party = "I"; agriculture_minister_party = "DNVP"; reichswehr_minister = "I"; leverage = spd_r;
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SDP"; finance_minister_party = "DNVP"; interior_minister_party = "NSDAP"; justice_minister_party = "I"; economic_minister_party = "DNVP"; labor_minister_party = "DNVP"; foreign_minister_party = "I"; agriculture_minister_party = "DNVP"; reichswehr_minister = "I"; leverage = spd_r;
 go-to: ministries
 
 Otto Wels was appointed as Chancellor of the cabinet by an agreement between the SPD, NSDAP and DNVP. Now, we have our pick of ministries.
@@ -616,7 +616,7 @@ We ain't gonna do that lol.
 
 
 @social_fascist_coalition_possible
-on-arrival: spd_in_government = 1; chancellor = "Wels" chancellor_party = "SDP"; finance_minister_party = "NSDAP"; interior_minister_party = "NSDAP"; .justice_minister_party = I"; economic_minister_party = "NSDAP"; labor_minister_party = "NSDAP"; foreign_minister_party = "I"; agriculture_minister_party = "NSDAP"; reichswehr_minister = "I"; leverage = spd_r;
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SDP"; finance_minister_party = "NSDAP"; interior_minister_party = "NSDAP"; justice_minister_party = "I"; economic_minister_party = "NSDAP"; labor_minister_party = "NSDAP"; foreign_minister_party = "I"; agriculture_minister_party = "NSDAP"; reichswehr_minister = "I"; leverage = spd_r;
 go-to: ministries
 
 Otto Wels was appointed as Chancellor of the cabinet by an agreement between the SPD and NSDAP, despite Hitler's desire to have it. Now, we have our pick of ministries.
