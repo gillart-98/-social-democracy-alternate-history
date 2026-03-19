@@ -1,0 +1,35 @@
+title: Distract the people from the epstein files
+new-page: true
+is-card: true
+tags: govt_affairs
+on-arrival: month_actions += 1;
+view-if: chancellor = "Jeffery Epstein"
+card-image: img/portraits/EpsteinJeffery.jpg
+#subtitle: There is dissent within our coalition.
+
+= Distract the people from the epstein files
+
+People are asking our party and Adolf Hitler's party to release the Epstein Files, we need to distract them...
+
+How do we reduce tensions with the coalition?
+
+- @epstein_jews: We can blame the Jews for the files
+- @epstein_zionist_attack: Appeal to the Zionists to start attacking the British and kill King Edward VIII
+- @epstein_neurenberg: Neurenberg laws need to be implemented before they find out about Epstein.
+- @easy_discard
+
+
+@epstein_jews
+on-arrival: workers_spd += 5; unemployed_spd -= 3; workers_nsdap += 5; unemployed_nsdap -= 3; unemployed_kpd += 6
+
+We simple blamed the Jews for all the rethoric surrounding the Files.
+
+@epstein_zionist_attack:
+on-arrival: workers_spd += 5; unemployed_spd += 3; workers_nsdap += 5; unemployed_nsdap += 3; west_relation -= 3
+
+Zionist militias launched their attacks on the UK with Italian planes. This would be known as Operation Roaring Lion. The bombs would manage to hit many British officialls and even the King himself, Edward VIII.
+
+@epstein_neurenberg
+on-arrival: workers_spd -= 3; unemployed_spd += 5; workers_nsdap -= 3; unemployed_nsdap += 5
+
+We woudl vote to implement the antisemetic neurenberg laws, which will target the jews to hopefully distract the population from the Epstein files.
