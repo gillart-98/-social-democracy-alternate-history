@@ -616,10 +616,28 @@ We ain't gonna do that lol.
 
 
 @social_fascist_coalition_possible
-on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SDP"; finance_minister_party = "NSDAP"; interior_minister_party = "NSDAP"; justice_minister_party = "I"; economic_minister_party = "NSDAP"; labor_minister_party = "NSDAP"; foreign_minister_party = "I"; agriculture_minister_party = "NSDAP"; reichswehr_minister = "I"; leverage = spd_r;
+on-arrival: spd_in_government = 1; finance_minister_party = "NSDAP"; interior_minister_party = "NSDAP"; justice_minister_party = "I"; economic_minister_party = "NSDAP"; labor_minister_party = "NSDAP"; foreign_minister_party = "I"; agriculture_minister_party = "NSDAP"; reichswehr_minister = "I"; leverage = spd_r;
+
+Who R we picking as leader?
+
+- @Otto_nazi
+- @epsteinfury
+- @adolph
+
+@Otto_nazi
+on-arrival: chancellor = "Wels"; chancellor_party = "SDP";
+Otto Wels was appointed as Chancellor of the cabinet by an agreement between the SPD and NSDAP, despite Hitler's desire to have it. Now, we have our pick of ministries.
 go-to: ministries
 
-Otto Wels was appointed as Chancellor of the cabinet by an agreement between the SPD and NSDAP, despite Hitler's desire to have it. Now, we have our pick of ministries.
+@epsteinfury
+on-arrival: chancellor = "Jeffery Epstein"; chancellor_party = "I";
+Jeffery Epstein was appointed as Chancellor of the cabinet by an agreement between the SPD and NSDAP, as both Otto Wels and Adolf Hitler had gotten to the island. Now, we have our pick of ministries.
+go-to: ministries
+
+@adolph
+on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP";
+Adolf Hitler was appointed as Chancellor of the cabinet by an agreement between the SPD and NSDAP, despite the risks it poses. Now, we have our pick of ministries.
+go-to: ministries
 
 @right_coalition
 title: Refuse to form a government, so that a right-wing coalition may be formed.
