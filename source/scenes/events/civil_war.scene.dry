@@ -23,6 +23,8 @@ Q.civil_war_seen = 1;
 Q.total_power = 0;
 // TODO:  lower reichsbanner strength if the party's popularity is very low.
 Q.rb_power = Q.rb_strength*Q.rb_militancy;
+Q.sh_power = Q.sh_strength*Q.sh_militancy;
+Q.sa_power = Q.sa_strength*Q.sa_militancy;
 if (Q.dissent > 0.15) {
     Q.rb_power *= (1 - Q.dissent/1.5);
 }
@@ -46,6 +48,16 @@ if (Q.kpd_relation >= 60) {
 } else if (Q.kpd_relation >= 45) {
     Q.total_power += Q.rfb_power*0.5;
 }
+if (Q.dnvp_relation >= 60) {
+    Q.total_power += Q.sh_power;
+} else if (Q.dnvp_relation >= 45) {
+    Q.total_power += Q.sh_power*0.5;
+}
+if (Q.nsdap_relation >= 60) {
+    Q.total_power += Q.sa_power;
+} else if (Q.nsdap_relation >= 45) {
+    Q.total_power += Q.sa_power*0.5;
+}
 // general strike strength
 // maximum (given 25 labor strength) is 400
 // use normalized workers_spd instead of labor_strength?
@@ -62,10 +74,21 @@ console.log("Supporter strength:", Q.total_power);
 
 // our enemies
 Q.enemy_power = 0;
-Q.sa_power = Q.sa_strength*Q.sa_militancy;
 Q.enemy_power += Q.sa_power;
-Q.sh_power = Q.sh_strength*Q.sh_militancy;
 Q.enemy_power += Q.sh_power;
+if (Q.nsdap_relation < 45) {
+    Q.total_power += Q.sa_power;
+} else if (Q.nsdap_relation < 60) {
+    Q.total_power += Q.sa_power*0.5;
+}
+if (Q.dnvp_relation < 45) {
+    Q.total_power += Q.sh_power;
+} else if (Q.dnvp_relation < 60) {
+    Q.total_power += Q.sh_power*0.5;
+}
+if (Q.nsdap_relation >= 45) {
+    Q.total_power += Q.rfb_power;
+}
 Q.hostile_reichswehr_power = Q.reichswehr_strength*Q.reichswehr_militancy*(1-Q.reichswehr_loyalty);
 Q.enemy_power += Q.hostile_reichswehr_power;
 console.log("Enemy strength:", Q.enemy_power);
@@ -87,7 +110,7 @@ go-to: war_menu
 
 = The Array of Forces
 
-Our enemies are the nationalist Stahlhelm, with [+ sh_strength +] thousand troops, and the Nazi SA, with [+ sa_strength +] thousand troops. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ prussian_police_strength +] thousand members, are unclear.
+Our enemies are the [? if dnvp_relation < 45 : nationalist Stahlhelm, with [+ sh_strength +] thousand troops?], [? if dnvp_relation < 45 : the Nazi SA, with [+ sa_strength +] thousand troops?], [? if nsdap_relation >= 45 : Communist Stahlhelm, with [+ rfb_strength +] thousand troops?]. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ prussian_police_strength +] thousand members, are unclear.
 
 [? if chancellor_party == "KPD" or president == "Thälmann" : The KPD's paramilitary, the RFB, is leading the battle, and we are their co-combatants. ?]
 
@@ -103,6 +126,8 @@ What else do we have?
 
 - @rw_help: Appeal to the Reichswehr to stand down.
 - @kpd_help: Call for support from the Communists.
+- @dnvp_help: Call for support from the Stahlhelm.
+- @nsdap_help: Call for support from the SA.
 - @general_strike: Call a general strike!
 - @loyal_police: Call up the loyal portions of the police.
 - @war_outcome: Now, the battle...
@@ -116,13 +141,33 @@ We have urged the Reichswehr to stand down, to avoid killing their countrymen. [
 
 @kpd_help
 max-visits: 1
-view-if: chancellor_party != "KPD" and president != "Thälmann" 
+view-if: chancellor_party != "KPD" and president != "Thälmann" and nsdap_relation < 45 
 go-to: war_menu
 on-arrival: war_choices += 1
 
 There are [+ rfb_strength +] thousand fighters with the Communist RFB, in addition to the workers who support the KPD.
 
 [? if kpd_relation >= 60 : The KPD is entirely on our side, owing to our good relations.. ?][? if kpd_relation < 60 and kpd_relation >= 45 : Most of the KPD is on our side, due to their good relations with us. ?][? if kpd_relation < 45 : The KPD does not support us. ?]
+
+@dnvp_help
+max-visits: 1
+view-if: dnvp_relation >= 45 
+go-to: war_menu
+on-arrival: war_choices += 1
+
+There are [+ sh_strength +] thousand fighters with the Nationalist Stahlhelm.
+
+[? if dnvp_relation >= 60 : The Stahlhelm is entirely on our side... ?][? if dnvp_relation < 60 : Most of the Stahlhelm is on our side, due to their good relations with us. ?]
+
+@nsdap_help
+max-visits: 1
+view-if: nsdap_relation >= 45 
+go-to: war_menu
+on-arrival: war_choices += 1
+
+There are [+ sa_strength +] thousand fighters with the Nazi SA.
+
+[? if nsdap_relation >= 60 : The Nazis are entirely on our side... ?][? if nsdap_relation < 60 : Most of the Nazis are on our side, due to their good relations with us. ?]
 
 @general_strike
 max-visits: 1
@@ -152,8 +197,12 @@ on-arrival: war_choices += 1;
 
 
 @war_outcome
-view-if: war_choices >= 2
+view-if: war_choices >= 2 and nsdap_relation < 45
 go-to: defeat if total_defeat = 1; long_war if long_war = 1; republic_victory if republic_victory = 1
+
+@war_outcome_1
+view-if: war_choices >= 2 and nsdap_relation >= 45
+go-to: defeat if total_defeat_1 = 1; long_war if long_war = 1; republic_victory_1 if republic_victory = 1
 
 @defeat
 
@@ -165,8 +214,18 @@ Our resistance will be recorded in the history books, and in the future, our nam
 
 - @game_over: Game over.
 
+@defeat_1
+
+= Total Defeat
+
+Our forces are no match for those of the liberals. Reichsbanner fighters are quickly overpowered by the forces of the RFB, and Reichswehr. Many are killed before the rest surrender. Our remaining leaders flee the country or face execution, as the Liberals and communists restore their degeneracy over Germany.
+
+Nazism is once and for all supressed, while the KPD reforms into the SED to attract moderate voters, being predicted to win elections in a landslide. 
+
+- @game_over: Game over.
+
 @long_war
-go-to: long_war_intervention if resist_coup == 0; game_over_menu if resist_coup == 1
+go-to: long_war_intervention_1 if resist_coup == 0 and nsdap_relation < 45; long_war_intervention if resist_coup == 0 and nsdap_relation >= 45; game_over_menu if resist_coup == 1
 
 = Long War
 
@@ -181,6 +240,13 @@ While we might want to call for foreign assistance, the foreign powers see the "
 - @game_over
 
 # no war
+
+@long_war_intervention_1
+
+- @italy_aid: Perhaps we can receive aid from the Italians.
+- @amerikkka_aid: Perhaps we can receive aid from the Americans.
+- @east_aid_1: Perhaps our eastern neighbors, Poland and the Baktics, can help us. We can fearmonger them about the spoopy soviets.
+- @game_over: Game over.
 
 @long_war_intervention
 
@@ -216,6 +282,27 @@ go-to: long_war_intervention
 
 Poland and Czechoslovakia are largely too absorbed in their own problems to be of much help, but weapons and volunteers filter through the parts of the borders that we control.
 
+@east_aid_1
+choose-if: east_relation >= 2
+on-arrival: east_aid += 1
+unavailable-subtitle: Our relations are not strong enough.
+max-visits: 1
+go-to: long_war_intervention_1
+
+Poland and Czechoslovakia are largely too absorbed in their own problems to be of much help, but weapons and volunteers filter through the parts of the borders that we control.
+
+@amerikkka_aid
+max-visits: 1
+go-to: long_war_intervention_1
+
+We manage to secure aid from American bankers and corporations to aid the cause. The border will be moved by their help.
+
+@italy_aid
+max-visits: 1
+go-to: long_war_intervention_1
+
+We manage to secure aid from the Italians, as our nationalist brothers they will help us defeat the KPD and Liberals.
+
 @republic_victory
 
 = Victory for the Republic
@@ -223,4 +310,13 @@ Poland and Czechoslovakia are largely too absorbed in their own problems to be o
 The battle lines hold, and the SA, Stahlhelm, and pro-coup Reichswehr forces are defeated. Today, the forces of the republic prevail over the fascists and the reactionaries. There is a new revolution in Germany. Let us hope it produces a longer-lasting peace than the previous one.
 
 - @game_over: Game over.
+
+@republic_victory_1
+
+= Victory for the Nationalist cause
+
+The battle lines hold, and the RFB, liberals, and pro-coup Reichswehr forces are defeated. Today, the forces of nationalism prevail over the degenerates. There is a new revolution in Germany, a national one to end the republic's degeneracy and start a new one.
+
+- @game_over: Game over.
+
 
