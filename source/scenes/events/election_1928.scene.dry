@@ -550,7 +550,7 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 title: Radical Centre coalition
 subtitle: SDP + DNVP + Others ([+ nationalist_coalition +]%)
 unavailable-subtitle: SDP + DNVP + Others ([+ nationalist_coalition +]%). [? if dnvp_relation < 50 : We do not have adequate relations with the DNVP. ?]
-view-if: nationalist_coalition >= 50
+view-if: nationalist_coalition >= 50 and dnvp_relation >= 20
 choose-if: dnvp_relation >= 50
 priority: 2
 
@@ -575,7 +575,7 @@ Otto Wels was appointed as Chancellor of the cabinet by an agreement between the
 title: Social Nationalist coalition
 subtitle: SDP + NSDAP + DNVP + Others ([+ scandinavian_socdem_coalition +]%)
 unavailable-subtitle: SDP + NSDAP + DNVP + Others ([+ scandinavian_socdem_coalition +]%). [? if dnvp_relation < 50 : We do not have adequate relations with the DNVP. ?] [? if nsdap_relation < 50 : We do not have adequate relations with the NSDAP. ?]
-view-if: scandinavian_socdem_coalition >= 50
+view-if: scandinavian_socdem_coalition >= 50 and nsdap_relation >= 20
 choose-if: dnvp_relation >= 50 and nsdap_relation >= 50
 priority: 2
 
@@ -600,7 +600,7 @@ Otto Wels was appointed as Chancellor of the cabinet by an agreement between the
 title: Social Fascist coalition
 subtitle: SDP + NSDAP + Others ([+ social_fascist_coalition +]%)
 unavailable-subtitle: SDP + NSDAP + DNVP + Others ([+ social_fascist_coalition +]%). [? if nsdap_relation < 50 : We do not have adequate relations with the NSDAP. ?]
-view-if: social_fascist_coalition >= 50
+view-if: social_fascist_coalition >= 50 and nsdap_relation >= 20
 choose-if: nsdap_relation >= 50
 priority: 2
 
