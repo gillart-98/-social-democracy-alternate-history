@@ -114,7 +114,7 @@ Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.nationalist_coalition = Q.spd_r + Q.other_r + Q.dnvp_r;
 Q.scandinavian_socdem_coalition = Q.spd_r + Q.other_r + Q.dnvp_r + Q.nsdap_r;
-Q.social_fascist_coalition = Q.spd_r + Q.other_r + Q.dnvp_r + Q.nsdap_r;
+Q.social_fascist_coalition = Q.spd_r + Q.nsdap_r;
 Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
 Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
@@ -598,8 +598,8 @@ Otto Wels was appointed as Chancellor of the cabinet by an agreement between the
 
 @social_fascist_coalition
 title: Social Fascist coalition
-subtitle: SDP + NSDAP + Others ([+ social_fascist_coalition +]%)
-unavailable-subtitle: SDP + NSDAP + DNVP + Others ([+ social_fascist_coalition +]%). [? if nsdap_relation < 50 : We do not have adequate relations with the NSDAP. ?]
+subtitle: SDP + NSDAP ([+ social_fascist_coalition +]%)
+unavailable-subtitle: SDP + NSDAP ([+ social_fascist_coalition +]%). [? if nsdap_relation < 50 : We do not have adequate relations with the NSDAP. ?]
 view-if: social_fascist_coalition >= 50 and nsdap_relation >= 20
 choose-if: nsdap_relation >= 50
 priority: 2
