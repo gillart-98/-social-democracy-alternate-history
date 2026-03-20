@@ -1,0 +1,14 @@
+title: Hitler takes power.
+subtitle: The beginning of the end.
+view-if: spd_in_government != 1 and (chancellor == "Hitler" or president == "Hitler" or chancellor_party == "NSDAP")
+on-arrival: spd_in_government = 0
+tags: event
+new-page: true
+
+= Hitler Takes power in Germany
+
+We have done it, Hitler is in charge. The SPD helped him do so, and we are now in a coalition agreement. The SPD stands as one with then NSDAP and everyone else will be crushed.
+
+Oh how foolish the liberals were in trusting us...
+
+- @game_over: Game over.
