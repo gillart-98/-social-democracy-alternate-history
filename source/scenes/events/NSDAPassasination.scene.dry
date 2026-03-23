@@ -1,0 +1,12 @@
+title: SA assasination attempt on [+ nsdap_leader +]
+new-page: true
+subtitle: Attempted assasination of the NSDAP's leader
+view-if: gda_formed == 1
+max-visits: 1
+face-image: img/transnazis.jpg
+on-arrival: sa_banned = 1; sa_strength -= 10000; sa_militancy -= 1.00; sa_exists = 0
+tags: event
+
+= SA assasination attempt on [+ nsdap_leader +]
+
+After the NSDAP's moderation, radicals attempted to assasinate the "degenerate" leader of the Party.  [? if hitler_deported : They claim that Hitler's deportation made way from the "Jewish infiltration of the Party and seek to empower Hitler again.". ?][? if not hitler_deported : They claim that Hitler steered the party towards electoralism and "Jewish degeneracy", while seeking to reverse the course of the Party. ?] Many of the Assasins were arrested and the SA was fully disbanded as the NSDAP voted for the banning of the SA.
