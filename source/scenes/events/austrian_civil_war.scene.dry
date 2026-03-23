@@ -94,7 +94,7 @@ The result is that the Austrofascists have backed down! Caught in an untenable p
 
 [? if eu_austria: This is a great success of the new European Union, and its prestige is seen to rise internationally. ?]
 
-@invade
+@anchluss
 on-arrival: pro_republic += 5; west_relation -= 1; east_relation += 1; soviet_relation += 10; austria_victory = 1; reichswehr_loyalty += 0.1; coup_progress -= 2
 achievement: arbeiter_von_wien
 
