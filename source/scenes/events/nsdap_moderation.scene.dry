@@ -5,7 +5,7 @@ view-if: year = 1937 and (month = 2 or month = 3)
 max-visits: 1
 face-image: img/Dollfuss.jpg
 tags: event
-on-arrival: gda_formed = 1; Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'gda', 'other']; Q.workers_gda = 0; Q.old_middle_gda = 5; old_middle_nsdap -= 5; Q.new_middle_gda = 5; new_middle_nsdap = -5; Q.rural_gda = 3; rural_nsdap -= 3; Q.catholics_gda = 0;
+on-arrival: gda_formed = 1; workers_nsdap += 3; old_middle_nsdap -= 1; new_middle_nsdap = -3; rural_nsdap -= 3;
 
 = NSDAP moderates their platform
 
