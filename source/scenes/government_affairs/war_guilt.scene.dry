@@ -35,6 +35,6 @@ on-arrival: pacifism += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-di
 Destroying the "stabbed in the back" myth, in addition to finally correcting the historical record, would do a great deal to improve our party's reputation. This is why it would be resisted by the military establishment every step of the way.
 
 @wilhelmbad
-on-arrival: workers_spd += 15; new_middle_spd -= 5; old_middle_spd -= 5; unemployed_spd += 15; rural_spd += 15; pacifism += 1; nationalism += 5*(1-dissent); pro_republic += 5*(1-dissent); coup_progress -= 1; z_relation -= 5; dvp_relation -= 5; kpd_relation -= 5; reichswehr_loyalty += 0.2
+on-arrival: workers_spd += 15; new_middle_spd -= 5; old_middle_spd -= 5; unemployed_spd += 15; rural_spd += 15; pacifism += 1; nationalism += 5*(1-dissent); pro_republic += 5*(1-dissent); coup_progress -= 1; z_relation -= 5; dvp_relation -= 5; dnvp_relation -= 5; kpd_relation -= 5; nsdap_relation += 5;  reichswehr_loyalty += 0.2
 
 We officially endorsed the "stabbed in the back" myth, as we were betrayed by the Kaiser and his junkie minions during the Great War. The military establishment was turned against the monarchists who sabotaged us in the Great War, and forced our republic into humiliation. However the conservatives and liberals did not like our endorsement of a conspiracy theory.
