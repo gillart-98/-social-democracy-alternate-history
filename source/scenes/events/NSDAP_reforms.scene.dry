@@ -1,0 +1,20 @@
+title: Course of the NSDAP
+new-page: true
+subtitle: The NSDAP chooses a new course
+view-if: gda_formed == 1
+max-visits: 1
+face-image: img/transnazis.jpg
+go-to: nsdap_right if not hitler_deported; nsdap_left if hitler_deported 
+tags: event
+
+= [+ nsdap_leader +] attempts to form a new identity
+
+@nsdap_right
+on-arrival: rural_nsdap += 5; workers_nsdap -= 5; unemployed_nsdap -= 6; new_middle_nsdap += 3; old_middle_nsdap += 3; nsdap_ideology = "Hyperconservative Liberalism";
+
+The NSDAP has shifted towards more classical liberal and hardline conservative positions, instead of their usual fascism. This makes the NSDAP a more radical DNVP in many ways.
+
+@nsdap_left
+on-arrival: rural_nsdap -= 5; workers_nsdap += 5; unemployed_nsdap += 6; new_middle_nsdap -= 3; old_middle_nsdap -= 3; nsdap_ideology = "Pan-Germanic Socialism"; relation_nsdap += 5;
+
+Goebbels has long been sympathetic to Socialism, and now he is dropping the xenophobia of the NSDAP and oreinting towards a Pan-German and left-wing platform, rejecting antisemetic rethoric as a whole. Many in our party are still suspicious of their intentions but they look like they're now genuinely attempting to rehabilitate with the Left.
