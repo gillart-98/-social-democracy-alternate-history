@@ -1,0 +1,14 @@
+title: NSDAP moderates their platform
+new-page: true
+subtitle: NSDAP abandons fascism and supports the republic
+view-if: year = 1937 and (month = 2 or month = 3)
+max-visits: 1
+face-image: img/Dollfuss.jpg
+tags: event
+on-arrival: gda_formed = 1; parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'gda', 'other']; workers_gda = 0; old_middle_gda = 5; old_middle_nsdap -= 5; new_middle_gda = 5; new_middle_nsdap = -5; rural_gda = 3; rural_gda = 2; rural_nsdap -= 2; catholics_gda = 0;
+
+= NSDAP moderates their platform
+
+The NSDAP has begun moderating their platform into explicitly rejecting fascism and softening it's anti-slavic and antisemetic attitudes. The new NSDAP platform now supports the republic and states that it rejects the antisemetic persecutions in fascist states, while stating that they are only against Jewish domination of the banking industry. This comes as a surprise to many hardline NSDAP members, who quickly left to from the Greater German National Workers Unity Party(GDA). This party is explicitly against democracy and sees the NSDAP as "going soft". The Party is on the small fringes from the mainstream NSDAP.
+
+It's clear that the Nazis no longer present a threat to democracy and became an mainstream party.
