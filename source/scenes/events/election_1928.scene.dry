@@ -694,7 +694,7 @@ on-arrival: pro_republic += 5; center_dissent += 15; left_dissent += 10; labor_d
 go-to: antifa_coalition_2
 
 
-@antida_coalition_2
+@antifa_coalition_2
 on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "DNVP"; justice_minister_party = "Z"; labor_minister_party = "KPD"; reichswehr_minister_party = "I"; economic_minister_party = "DVP"; finance_minister_party = "KPD"; agriculture_minister_party = "DNVP"
 
 Even though the DNVP and KPD are very reluctant to participate in such a coalition, they still see the threat of fascism as greater than their petty differences. Thus, a majority anti-fascist coalition is formed, with Brüning as chancellor.
