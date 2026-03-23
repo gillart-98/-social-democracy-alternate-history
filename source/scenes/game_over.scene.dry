@@ -124,7 +124,7 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 
 
 @hitler_wins
-view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0)
+view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0) and nsdap_relation <= 40
 title: Adolf Hitler is in undisputed control over Germany.
 tags: endings
 go-to: eg_menu
@@ -132,6 +132,14 @@ go-to: eg_menu
 Adolf Hitler is in undisputed control over Germany. The SPD, along with all of the democratic forces, have failed.
 
 [? if civil_war_seen == 1 : At the very least, we fought back. Perhaps our resistance will be celebrated in an impossible-to-forsee future. ?]
+
+@hitler_wins_with_spd
+view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0) and nsdap_relation > 40
+title: Are we the baddies?
+tags: endings
+go-to: eg_menu
+
+We were the evils guys here, we helped the nazis take power and our legacy will probably be tained with blood...
 
 @war_against_hitler
 view-if: (chancellor == "Hitler" or president == "Hitler") and (long_war == 1)
