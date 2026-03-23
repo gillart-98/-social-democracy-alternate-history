@@ -14,6 +14,7 @@ A wave of starvation has hit the Soviet Union, eastern Poland and Bessarabia, wi
 - @helpeastandsoviet: Help all affected areas
 - @helpeast: Help Poland and Romania
 - @nothelp: Let them figure it out themselves
+- @jenocide: Condemn Soviet Genocide
 
 
 @helpeastandsoviet
@@ -36,3 +37,14 @@ We decided to only send aid to Poland and Romania, due to our distrust of the So
 on-arrival: z_relation -= 5; dvp_relation -= 5; kpd_relation -= 5; kpd_coalition_dissent += 1; coalition_dissent += 1
 
 We decided to not send out any aid, sparing money but losing reputation in the process. 
+
+@jenocide
+on-arrival: dnvp_relation += 5; nsdap_relation += 5; kpd_relation -= 5; kpd_coalition_dissent += 1;
+
+We decided to use this opportunity to agitate against the Soviet Union, because a genocide may or may not have happened there.
+
+@epsteinfilesholo
+view-if: chancellor = "Jeffery Epstein"
+on-arrival: dnvp_relation += 5; nsdap_relation += 5; new_middle_spd += 6; old_middle_spd += 6; rural_spd += 5; workers_spd += 4; unemployed_spd += 4;
+
+We use this opportunity to distract the people from the epstein files
