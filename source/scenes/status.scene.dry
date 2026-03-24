@@ -75,7 +75,6 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-
 {!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
 
 {!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
@@ -87,6 +86,22 @@ Economic growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
 
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+
+= Ideological Alignment
+
+Socialist Party of Germany: [+ spd_ideology +]
+
+Centre Party: [+ z_ideology +]
+
+German Democratic Party: [+ ddp_ideology +]
+
+German People's Party: [+ dvp_ideology +]
+
+Communist Party of Germany: [+ kpd_ideology +]
+
+German National People's Party: [+ dnvp_ideology +]
+
+National-Socialist German Worker's Party: [+ nsdap_ideology +]
 
 = Internal Factions of the SPD
 
