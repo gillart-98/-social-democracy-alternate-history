@@ -11,38 +11,43 @@ tags: event
 Our ideology has changed due to factional rise and changing relations.
 
 - @social_democratic_ideology
+- @syndical_democracy_ideology
+- @democratic_socialism_ideology
+- @social_nationalism_ideology
+- @syndicalism_national_ideology
+- @right_populism_ideology
 
-@social_democratic_ideology:
+@social_democratic_ideology
 view-if: ((centre_strength > left_strength and centre_strength > reformist_strength and centre_strength > labor_strength and centre_strength > neorevisionist_strength) or (reformist_strength > left_strength and reformist_strength > centre_strength and reformist_strength > labor_strength and reformist_strength > neorevisionist_strength)) and nsdap_relation < 50  
 on-arrival: sdp_ideology = "Social Democracy";
 
 Our ideology had changed to Social Democracy, a reformist ideology seeking moderate changes and cooperation with the capitalist parties.
 
-@syndical_democracy_ideology:
+@syndical_democracy_ideology
 view-if: labor_strength > left_strength and labor_strength > reformist_strength and labor_strength > centre_strength and labor_strength > neorevisionist_strength and nsdap_relation < 50  
 on-arrival: sdp_ideology = "Syndical Democracy";
 
 Our ideology had changed to Syndical Democracy, a ideology seeking to reform the state to a model dominated by trade unions.
 
-@democratic_socialism_ideology:
+@democratic_socialism_ideology
 view-if: ((left_strength > labor_strength and left_strength > reformist_strength and left_strength > centre_strength and left_strength > neorevisionist_strength) or (neorevisionist_strength > labor_strength and neorevisionist_strength > reformist_strength and neorevisionist_strength > centre_strength and neorevisionist_strength > left_strength)) and nsdap_relation < 50  
 on-arrival: sdp_ideology = "Democratic Socialism";
 
 Our ideology had changed to Democratic Socialism, a more radical variant of Social Democracy.
 
-@social_nationalism_ideology:
+@social_nationalism_ideology
 view-if: ((centre_strength > left_strength and centre_strength > reformist_strength and centre_strength > labor_strength and centre_strength > neorevisionist_strength) or (reformist_strength > left_strength and reformist_strength > centre_strength and reformist_strength > labor_strength and reformist_strength > neorevisionist_strength)) and nsdap_relation >= 50  
 on-arrival: sdp_ideology = "Social Nationalism";
 
 Our ideology had changed to Social Nationalism, a variant of social democracy promoting ultranationalism alongside social policy.
 
-@syndicalism_national_ideology:
+@syndicalism_national_ideology
 view-if: labor_strength > left_strength and labor_strength > reformist_strength and labor_strength > centre_strength and labor_strength > neorevisionist_strength and nsdap_relation >= 50  
 on-arrival: sdp_ideology = "National Syndicalism";
 
 Our ideology had changed to National Syndicalism, a ideology combining syndicalism and ultranationalism.
 
-@right_populism_ideology:
+@right_populism_ideology
 view-if: ((left_strength > labor_strength and left_strength > reformist_strength and left_strength > centre_strength and left_strength > neorevisionist_strength) or (neorevisionist_strength > labor_strength and neorevisionist_strength > reformist_strength and neorevisionist_strength > centre_strength and neorevisionist_strength > left_strength)) and nsdap_relation >= 50  
 on-arrival: sdp_ideology = "Right-Wing Populism";
 
