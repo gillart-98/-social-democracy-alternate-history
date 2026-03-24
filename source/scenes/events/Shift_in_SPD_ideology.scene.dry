@@ -10,12 +10,12 @@ tags: event
 
 Our ideology has changed due to factional rise and changing relations.
 
-- @social_democratic_ideology
-- @syndical_democracy_ideology
-- @democratic_socialism_ideology
-- @social_nationalism_ideology
-- @syndicalism_national_ideology
-- @right_populism_ideology
+- @social_democratic_ideology: Social Democracy
+- @syndical_democracy_ideology: Syndical Democracy
+- @democratic_socialism_ideology: Democratic Socialism
+- @social_nationalism_ideology: Social Nationalism
+- @syndicalism_national_ideology: National Syndicalism
+- @right_populism_ideology: Right-Wing Populism
 
 @social_democratic_ideology
 view-if: ((centre_strength > left_strength and centre_strength > reformist_strength and centre_strength > labor_strength and centre_strength > neorevisionist_strength) or (reformist_strength > left_strength and reformist_strength > centre_strength and reformist_strength > labor_strength and reformist_strength > neorevisionist_strength)) and nsdap_relation < 50  
