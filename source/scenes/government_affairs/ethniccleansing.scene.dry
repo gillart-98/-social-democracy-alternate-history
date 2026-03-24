@@ -1,0 +1,45 @@
+title: Do Ethnic Cleansing
+on-arrival: month_actions += 1
+view-if: spd_in_government = 1 and interior_minister_party = "SPD" and nsdap_relation >= 50
+card-image: img/Trolling.jpg
+is-card: true
+new-page: true
+
+= Ethnic Cleansing
+
+As the interior minister, we can do some funnies.
+
+- @ethniccleansingcatholics: Ethnically cleanse Catholics.
+- @ethniccleansingjews: Ethnically cleanse Jews.
+- @ethniccleansingslavs: Ethnically cleanse Slavs.
+- @ethniccleansingbavarians: Ethnically cleanse Bavarians.
+- @root: Take no action for now.
+
+@ethniccleansingcatholics
+view-if: catholics >= 1
+choose-if: interior_police_loyalty >= 0.3
+unavailable-subtitle: [? if interior_police_loyalty < 0.3 : The police are too disloyal to be trusted with this. ?]
+on-arrival: catholics = -10; z_relation -= 10; kpd_relation -= 10; dnvp_relation += 5; nsdap_relation += 5; rfb_strength += 50; prussian_police_loyalty += 0.05; interior_police_loyalty += 0.05; catholics_spd -= 5; catholics_kpd += 15; old_middle_dnvp += 5; old_middle_spd += 5;
+
+We ordered a "removal" of Catholics, and this was enthusiastically carried out by the police, perhaps too enthusiastically. We had some help from the NSDAP with this ethnic cleansing...
+
+@ethniccleansingjews
+choose-if: interior_police_loyalty >= 0.3
+unavailable-subtitle: [? if interior_police_loyalty < 0.3 : The police are too disloyal to be trusted with this. ?]
+on-arrival: new_middle = -3; old_middle = -3; z_relation -= 10; kpd_relation -= 10; dnvp_relation += 5; nsdap_relation += 5; rfb_strength += 50; prussian_police_loyalty += 0.05; interior_police_loyalty += 0.05; old_middle_dnvp += 5; old_middle_spd += 5;
+
+We ordered a "removal" of 🧃, and this was enthusiastically carried out by the police, perhaps too enthusiastically. We had some help from the NSDAP with this ethnic cleansing...
+
+@ethniccleansingslavs
+choose-if: interior_police_loyalty >= 0.3
+unavailable-subtitle: [? if interior_police_loyalty < 0.3 : The police are too disloyal to be trusted with this. ?]
+on-arrival: rural = -3; z_relation -= 10; kpd_relation -= 10; dnvp_relation += 5; nsdap_relation += 5; rfb_strength += 50; prussian_police_loyalty += 0.05; interior_police_loyalty += 0.05; old_middle_dnvp += 5; old_middle_spd += 5;
+
+We ordered a "removal" of Slavs, and this was enthusiastically carried out by the police, perhaps too enthusiastically. We had some help from the NSDAP with this ethnic cleansing...
+
+@ethniccleansingbavarians
+choose-if: interior_police_loyalty >= 0.3 and catholics >= 1
+unavailable-subtitle: [? if catholics >= 1 : We already did enough ethnic cleansing against catholics, no need to do it against bavarians specifically too. ?][? if interior_police_loyalty < 0.3 : The police are too disloyal to be trusted with this. ?]
+on-arrival: rural = -5; catholics = -5; z_relation -= 10; kpd_relation -= 10; dnvp_relation += 5; nsdap_relation += 5; rfb_strength += 50; prussian_police_loyalty += 0.05; interior_police_loyalty += 0.05; old_middle_dnvp += 5; old_middle_spd += 5; catholics_spd -= 5; catholics_kpd += 15;
+
+We ordered a "removal" of Bavarians, and this was enthusiastically carried out by the police, perhaps too enthusiastically. We had some help from the NSDAP with this ethnic cleansing...
