@@ -161,6 +161,7 @@ Q.nazi_femboys = 0;
 Q.braundictator = 0;
 Q.Hitlertortured = 0;
 Q.everyonebanned = 0;
+Q.SA_peace = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
