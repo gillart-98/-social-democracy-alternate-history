@@ -78,6 +78,6 @@ We have made at least a temporary truce with the DNVP, so that our respective pa
 choose-if: nsdap_relation >= 45
 view-if: kpd_truce == 0
 unavailable-subtitle: The Nazis are not interested.
-on-arrival: nsdap_relation += 5; sa_strength += 50; rb_strength += 50; rfb_strength += 50;
+on-arrival: nsdap_relation += 5; sa_strength += 50; rb_strength += 50; rfb_strength += 50; SA_peace = 1;
 
 We have made at least a temporary truce with the NSDAP, so that our respective paramilitaries will stop fighting.
