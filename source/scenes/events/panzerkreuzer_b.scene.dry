@@ -13,6 +13,7 @@ The Navy is demanding the construction of another new battlecruiser. [? if panze
 Much of our party is deeply opposed to rearmament, while the center and right parties are united in support. What will we do?
 
 - @vote_yes: Vote yes, for constructing the battlecruiser.
+- @vote_yes_rep: Vote yes, for constructing the battlecruiser, and reduce reparations.
 - @vote_no: Vote no, against constructing the battlecruiser.
 - @abstain: Abstain from the vote.
 - @ministry: Use the Reichswehr Ministry to prevent the construction.
@@ -23,6 +24,12 @@ on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformi
 Our grassroots party members are highly critical of our decision. Many party branches have increased their agitation against our parliamentary fraction. [? if panzerkreuzer_funded : However, given the construction of the previous battlecruiser, this seemed to be a foregone conclusion, and the reaction is muted. ?]
 
 The vote in favor of the battlecruiser easily passes, with opposition only from the KPD. The ship will be built.
+
+
+@vote_yes_rep
+on-arrival: left_dissent -= 5; labor_dissent -= 5; center_dissent -= 5; reformist_dissent -= 5 if not panzerkreuzer_funded; neorevisionist_dissent -= 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpd_coalition_dissent -= 1; kpd_relation += 6; z_relation += 6; dpp_relation += 6; dvp_relation += 6; dnvp_relation += 6; nsdap_relation += 6; west_relation -= 2; workers_spd += 4
+
+Everyone votes for this battleship, it easily passes with 100% support from parlaiment. However the western leeches did not like our reduction in reparations, as it harms their income source.
 
 @vote_no
 on-arrival: dvp_relation -= 8; z_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_spd += 4*(1-dissent) if nationalism < 49;
