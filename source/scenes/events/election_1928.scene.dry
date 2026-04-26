@@ -344,6 +344,7 @@ There are some potential coalition arrangements.
 - @opposition_coalitions: What if we don't want a coalition?
 
 @opposition_coalitions
+
 - @coalition_menu: Go Back
 - @anti_fascist_coalition
 - @far_right_coalition
@@ -351,6 +352,7 @@ There are some potential coalition arrangements.
 - @some_more_coals: Ok so are there more options to form coalitions?
 
 @some_more_coals
+
 - @coalition_menu: Go Back
 - @brauns_dilemma
 - @left_coalition
