@@ -332,12 +332,26 @@ There are some potential coalition arrangements.
 - @grand_coalition
 - @new_grand_coalition
 - @unity_government
+- @more_coalitions: See more possible coalitions
+
+
+@more_coalitions
+
+- @coalition_menu: Go Back
 - @nationalist_coalition
 - @social_nationalist_coalition
 - @social_fascist_coalition
+- @opposition_coalitions: What if we don't want a coalition?
+
+@opposition_coalitions
+- @coalition_menu: Go Back
 - @anti_fascist_coalition
 - @far_right_coalition
 - @no_majority
+- @some_more_coals: Ok so are there more options to form coalitions?
+
+@some_more_coals
+- @coalition_menu: Go Back
 - @brauns_dilemma
 - @left_coalition
 - @popular_front_coalition
