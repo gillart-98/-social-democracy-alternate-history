@@ -1,0 +1,13 @@
+title: NSDAP x SDP when?!?!?!
+subtitle: A new year
+on-arrival: {!
+// see post_event.scene.dry for changes.
+Q.economic_growth += 4;
+
+!}
+tags: event
+view-if: nsdap_relation >= 70
+priority: 2
+max-visits: 1
+
+When we gonna see NSDAP x SDP Yuri art
